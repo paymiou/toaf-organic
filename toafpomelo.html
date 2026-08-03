@@ -266,25 +266,37 @@
                 </div>
 
                 <!-- 嵌入影片區域 -->
-                <div class="mt-20 max-w-4xl mx-auto px-4">
-                    <div class="text-center mb-8">
-                        <h4 class="text-xl font-bold text-pomelo-leaf mb-2 flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-circle-play text-pomelo-peel"></i>
-                            <span>聆聽・護柚善業故事</span>
-                        </h4>
-                        <p class="text-xs text-pomelo-gray">點擊播放影片，深入了解這片充滿感恩心意的文旦柚土地故事</p>
-                    </div>
-                    
-                    <div class="relative pb-[56.25%] h-0 w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-pomelo-flesh">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/31f4p_EzWJs?si=45NcdmSKsfrRBXTK" 
-                            title="護柚善業紀錄片" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
+<div class="mt-20 max-w-4xl mx-auto px-4">
+    <div class="text-center mb-8">
+        <h4 class="text-xl font-bold text-pomelo-leaf mb-2 flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-circle-play text-pomelo-peel"></i>
+            <span>聆聽・護柚善業故事</span>
+        </h4>
+        <p class="text-xs text-pomelo-gray">點擊播放影片，深入了解這片充滿感恩心意的文旦柚土地故事</p>
+    </div>
+    
+    <!-- 影片播放器容器 -->
+    <div class="relative pb-[56.25%] h-0 w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-pomelo-flesh">
+        <iframe 
+            class="absolute top-0 left-0 w-full h-full" 
+            src="https://www.youtube.com/embed/31f4p_EzWJs?si=45NcdmSKsfrRBXTK" 
+            title="護柚善業紀錄片" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- ⬇️ 【新增】更多精彩影片按鈕 (點擊切換至精選影片頁籤) ⬇️ -->
+    <div class="text-center mt-8 md:mt-10">
+        <button onclick="navigateTo('videos')" 
+                class="inline-flex items-center space-x-2 px-8 py-3.5 rounded-full bg-pomelo-peel hover:bg-pomelo-leaf text-white font-bold shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+            <span>更多精彩影片</span>
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+        </button>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
@@ -660,21 +672,20 @@
 </div>
 
     <script>
-// ===== 1. 精選影片資料庫（更新標題與年份/日期標籤） =====
+// ===== 1. 精選影片資料庫（YouTube ID 庫） =====
 const videosData = [
-    { title: "美妹訪談-回饋佛菩薩", tag: "2014", id: "1J1vxayvJSpzNwAtZcDEIf2weNpaxXMBp" },
-    { title: "採柚法會回顧", tag: "2015", id: "1dq8M65Ej9iJIhiZvcBGK01CfU_oKLv-y" },
-    { title: "一同歡慶豐收", tag: "2016/9/4", id: "1ZNtz12F6AiCEdeHGUckX7JMrE-BPNfCg" },
-    { title: "我就這樣過一生嗎？", tag: "2021", id: "1kowkTTk0HOsP9dA14pbqajSB-ozrL4Kc" },
-    { title: "病痛在家也沒辦法不如去當義工", tag: "2021", id: "1QYdfzQaJstNgiqRrFzMtehRuhlo1Ryhq" },
-    { title: "跟著師父後不只有種田", tag: "2021", id: "1Y-IfPhfuCfgUYhQJISuPiLa5nyEXd9rA" },
-    { title: "澈見報導-以善護善 慈心號召義工採柚", tag: "2021/8/29", id: "1ECibvy_Yfl-bl9wVyzj-2i0bvWqxQ0qh" },
-    { title: "柚到集資好時光", tag: "2021/8/29", id: "17_SivgmW1wDU6eDVKvjGZesCSuAMA1Te" },
-    { title: "美妹種柚 ‧ 我護柚", tag: "2023/9/17", id: "1EMnH9NoJKYBoHYz3nDK5ARAYGouM0gkt" },
+    { title: "美妹訪談-回饋佛菩薩", tag: "2014 訪談畫面", id: "P7QUzWCiUWQ" },
+    { title: "一年一度採柚法會回顧影片", tag: "2015 採柚回顧", id: "12ysxAO0EaA" },
+    { title: "下次要去採柚，一同歡慶豐收", tag: "2016 採柚回顧", id: "jIUamCCHZ74" },
+    { title: "第一部-我就這樣過一生嗎？", tag: "2021 教育影片", id: "lPafkto4I2s" },
+    { title: "第二部-病痛在家也沒辦法不如去當義工", tag: "2021 教育影片", id: "0ZL9sWK2G_I" },
+    { title: "第三部-跟著師父後不只有種田", tag: "2021 教育影片", id: "_TcVGJwvkTU" },
+    { title: "以善護善．慈心號召義工採柚", tag: "2021 澈見報導", id: "RjNOyRFsI0Q" },
+    { title: "柚到集資好時光", tag: "2021 預購宣導片", id: "etph-_iCrkw" },
+    { title: "美妹種柚 ‧ 我護柚", tag: "2023 預購宣導片", id: "ojjIBcMhMCw" },
 ];
 
-// ===== 2. 精選影片卡片渲染 =====
-// ===== 精選影片卡片渲染（已修復 16:9 預覽畫面偏下問題） =====
+// ===== 2. 精選影片卡片渲染（採用 YouTube 高畫質封面） =====
 function renderVideos() {
     const grid = document.getElementById('video-grid');
     if (!grid) return;
@@ -683,14 +694,14 @@ function renderVideos() {
         <div onclick="openVideoModal('${video.id}', '${video.title}')" 
              class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-pomelo-peel/20 flex flex-col justify-between">
             
-            <!-- 影片預覽區塊（16:9 比例，放大並向上位移以將影像精準置中） -->
+            <!-- 影片縮圖區塊 -->
             <div class="relative w-full aspect-video bg-pomelo-dark/5 overflow-hidden flex items-center justify-center">
-                <iframe 
-                    class="absolute inset-0 w-full h-full pointer-events-none scale-125 -translate-y-[8%] filter blur-[1px] opacity-80" 
-                    src="https://drive.google.com/file/d/${video.id}/preview" 
-                    title="${video.title}"
-                    tabindex="-1">
-                </iframe>
+                <img 
+                    src="https://img.youtube.com/vi/${video.id}/hqdefault.jpg" 
+                    alt="${video.title}"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                />
                 
                 <!-- 中央播放按鈕 -->
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
@@ -711,7 +722,7 @@ function renderVideos() {
     `).join('');
 }
 
-// ===== 開啟全螢幕影片彈窗 =====
+// ===== 3. 開啟 YouTube 全螢幕彈窗 (自動播放) =====
 function openVideoModal(videoId, title) {
     const modal = document.getElementById('video-modal');
     const iframe = document.getElementById('video-modal-iframe');
@@ -720,28 +731,30 @@ function openVideoModal(videoId, title) {
     
     if (!modal || !iframe) return;
 
-    // 1. 動態更新標題與備用開啟連結
+    // 更新標題與 YouTube 另開連結
     if (modalTitle) modalTitle.textContent = title;
-    if (directLink) directLink.href = `https://drive.google.com/file/d/${videoId}/view`;
+    if (directLink) {
+        directLink.href = `https://youtu.be/${videoId}`;
+        directLink.querySelector('span').textContent = '前往 YouTube 觀看';
+    }
 
-    // 2. 顯示 Modal 視窗
     modal.classList.remove('hidden');
 
-    // 3. 載入 Google Drive 預覽網址
-    iframe.src = `https://drive.google.com/file/d/${videoId}/preview`;
+    // 帶入 YouTube Embed 播放器並開啟自動播放
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
-    // 4. 禁止背景網頁滾動
+    // 禁止背景網頁滾動
     document.body.style.overflow = 'hidden';
 }
 
-// ===== 關閉全螢幕影片彈窗 =====
+// ===== 4. 關閉全螢幕影片彈窗 =====
 function closeVideoModal() {
     const modal = document.getElementById('video-modal');
     const iframe = document.getElementById('video-modal-iframe');
     if (!modal || !iframe) return;
 
     modal.classList.add('hidden');
-    iframe.src = 'about:blank'; // 停止背景聲音
+    iframe.src = ''; // 清空網址以停止影片播放與聲音
 
     // 恢復背景網頁滾動
     document.body.style.overflow = '';
