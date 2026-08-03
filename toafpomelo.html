@@ -600,7 +600,7 @@
                 <!-- 頁面標題區 -->
 <!-- 頁面標題區 -->
 <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12 flex flex-col items-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-pomelo-leaf tracking-wide">護柚善業 精選影片</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-pomelo-leaf tracking-wide">護柚善業．精選影片</h2>
     
     <!-- ⬇️ 手機版分兩行，電腦版單行 ⬇️ -->
     <p class="text-pomelo-gray mt-2 text-sm md:text-base leading-relaxed">
@@ -686,6 +686,7 @@ const videosData = [
 ];
 
 // ===== 2. 精選影片卡片渲染（採用 YouTube 高畫質封面） =====
+// ===== 精選影片卡片渲染（右下角加入柚子小圖） =====
 function renderVideos() {
     const grid = document.getElementById('video-grid');
     if (!grid) return;
@@ -711,12 +712,22 @@ function renderVideos() {
                 </div>
             </div>
 
-            <!-- 卡片底部標題與日期 -->
-            <div class="p-4 bg-white border-t border-pomelo-cream">
+            <!-- 卡片底部標題與日期（含右下角柚子小圖） -->
+            <div class="p-4 bg-white border-t border-pomelo-cream relative">
                 <span class="inline-block px-2.5 py-0.5 bg-pomelo-peel/10 text-pomelo-leaf rounded-full text-xs font-semibold mb-1">
                     ${video.tag}
                 </span>
-                <h3 class="text-base font-bold text-pomelo-dark line-clamp-1 group-hover:text-pomelo-peel transition-colors">${video.title}</h3>
+                <!-- pr-8 防止長標題覆蓋右下角圖示 -->
+                <h3 class="text-base font-bold text-pomelo-dark line-clamp-1 group-hover:text-pomelo-peel transition-colors pr-8">
+                    ${video.title}
+                </h3>
+
+                <!-- 🍊 右下角柚子小圖 -->
+                <img 
+                    src="https://paymiou.github.io/toaf-organic/pomelo.png" 
+                    alt="柚子圖示" 
+                    class="absolute bottom-3 right-3 w-7 h-7 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 pointer-events-none"
+                />
             </div>
         </div>
     `).join('');
