@@ -104,6 +104,11 @@
                         <i class="fa-solid fa-newspaper transition-colors" id="nav-icon-reports"></i>
                         <span>相關報導</span>
                     </button>
+
+<button onclick="navigateTo('videos')" id="nav-btn-videos" class="px-4 py-2 rounded-full border border-pomelo-peel transition-all duration-300 shadow-sm hover:shadow-md font-medium text-sm flex items-center space-x-2 group">
+        <i class="fa-solid fa-circle-play transition-colors" id="nav-icon-videos"></i>
+        <span>精選影片</span>
+    </button>
                 </nav>
 
                 <!-- 行動裝置選單按鈕 -->
@@ -134,6 +139,11 @@
                 <i class="fa-solid fa-newspaper transition-colors" id="mobile-icon-reports"></i>
                 <span>相關報導</span>
             </button>
+
+<button onclick="navigateTo('videos')" id="mobile-btn-videos" class="w-full text-left block px-4 py-2.5 rounded-lg border border-pomelo-peel transition-all duration-200 flex items-center space-x-2 group">
+        <i class="fa-solid fa-circle-play transition-colors" id="mobile-icon-videos"></i>
+        <span>精選影片</span>
+    </button>
         </div>
     </header>
 
@@ -177,7 +187,7 @@
 <!-- 新增的報名按鈕 (使用 a 標籤另開新分頁) -->
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlb4g5i9LxmzTKoEIyk-oYIW8yM_DLN22_0re0HILYC-3sXQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-pomelo-pulp text-pomelo-dark hover:brightness-110 font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center space-x-2">
                         <img src="https://paymiou.github.io/toaf-organic/pomeloblack.png" alt="報名柚子圖示" class="w-5 h-5 object-contain">
-                        <span>採柚報名請按我</span>
+                        <span>9/13 採柚報名請按我</span>
                     </a>
 
                     <!-- 原本的按鈕 -->
@@ -570,6 +580,40 @@
         </section>
     </div>
 
+<!-- ⬇️ ⬇️ ⬇️ 請將「精選影片頁面」貼在這裡 ⬇️ ⬇️ ⬇️ -->
+    <div id="videos-view" class="view-transition hidden opacity-0 transform translate-y-4 pt-16 md:pt-20">
+        <section class="py-8 md:py-12 bg-pomelo-flesh relative min-h-[calc(100vh-80px)]">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                
+                <!-- 頁面標題區 -->
+<!-- 頁面標題區 -->
+<div class="text-center max-w-3xl mx-auto mb-8 md:mb-12 flex flex-col items-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-pomelo-leaf tracking-wide">護柚善業 精選影片</h2>
+    
+    <!-- ⬇️ 手機版分兩行，電腦版單行 ⬇️ -->
+    <p class="text-pomelo-gray mt-2 text-sm md:text-base leading-relaxed">
+        <span class="block md:inline">記錄二十年慈心護持點滴</span>
+        <span class="block md:inline">感受大地與自然的生命感動</span>
+    </p>
+</div>
+
+                <!-- 9 部影片響應式網格 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="video-grid">
+                    <!-- 影片卡片由 JS 動態生成 -->
+                </div>
+
+                <!-- 返回首頁按鈕 -->
+                <div class="text-center mt-10 md:mt-12">
+                    <button onclick="navigateTo('home')" class="px-8 py-3.5 rounded-full bg-pomelo-peel hover:bg-pomelo-leaf text-white font-bold shadow-md hover:shadow-lg transition-all duration-300">
+                        <span>返回首頁</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!-- ⬆️ ⬆️ ⬆️ 精選影片頁面貼到這裡結束 ⬆️ ⬆️ ⬆️ -->
+
     <!-- 照片放大檢視 Modal / Lightbox -->
     <div id="photo-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
         <button onclick="closePhotoModal()" class="absolute top-6 right-6 text-white text-3xl hover:text-pomelo-pulp transition-colors z-50 focus:outline-none" aria-label="Close modal">
@@ -582,7 +626,134 @@
         </div>
     </div>
 
+<!-- 影片全螢幕播放 Modal (含手機防黑屏備用按鈕) -->
+<div id="video-modal" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col items-center justify-center p-3 md:p-6">
+    
+    <!-- 頂部欄：影片名稱與關閉按鈕 -->
+    <div class="w-full max-w-5xl flex justify-between items-center mb-3 text-white px-1">
+        <h3 id="video-modal-title" class="text-base md:text-lg font-bold line-clamp-1 pr-4 text-pomelo-cream"></h3>
+        <button onclick="closeVideoModal()" class="text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2.5 transition-all shrink-0">
+            <i class="fa-solid fa-xmark text-xl w-5 h-5 flex items-center justify-center"></i>
+        </button>
+    </div>
+
+    <!-- 影片播放器容器 -->
+    <div class="w-full max-w-5xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl relative border border-white/10">
+        <iframe 
+            id="video-modal-iframe" 
+            class="w-full h-full border-0" 
+            src="" 
+            title="Video Player"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- 📱 手機 Safari / LINE 瀏覽器防黑屏 備用按鈕 -->
+    <div class="mt-4 text-center">
+        <a id="video-modal-direct-link" href="#" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center space-x-2 bg-pomelo-peel hover:bg-pomelo-leaf text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-full shadow-lg transition-all duration-300">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>手機若黑屏，點此開啟「雲端原生播放」</span>
+        </a>
+    </div>
+</div>
+
     <script>
+// ===== 1. 精選影片資料庫（更新標題與年份/日期標籤） =====
+const videosData = [
+    { title: "美妹訪談-回饋佛菩薩", tag: "2014", id: "1J1vxayvJSpzNwAtZcDEIf2weNpaxXMBp" },
+    { title: "採柚法會回顧", tag: "2015", id: "1dq8M65Ej9iJIhiZvcBGK01CfU_oKLv-y" },
+    { title: "一同歡慶豐收", tag: "2016/9/4", id: "1ZNtz12F6AiCEdeHGUckX7JMrE-BPNfCg" },
+    { title: "我就這樣過一生嗎？", tag: "2021", id: "1kowkTTk0HOsP9dA14pbqajSB-ozrL4Kc" },
+    { title: "病痛在家也沒辦法不如去當義工", tag: "2021", id: "1QYdfzQaJstNgiqRrFzMtehRuhlo1Ryhq" },
+    { title: "跟著師父後不只有種田", tag: "2021", id: "1Y-IfPhfuCfgUYhQJISuPiLa5nyEXd9rA" },
+    { title: "澈見報導-以善護善 慈心號召義工採柚", tag: "2021/8/29", id: "1ECibvy_Yfl-bl9wVyzj-2i0bvWqxQ0qh" },
+    { title: "柚到集資好時光", tag: "2021/8/29", id: "17_SivgmW1wDU6eDVKvjGZesCSuAMA1Te" },
+    { title: "美妹種柚 ‧ 我護柚", tag: "2023/9/17", id: "1EMnH9NoJKYBoHYz3nDK5ARAYGouM0gkt" },
+];
+
+// ===== 2. 精選影片卡片渲染 =====
+// ===== 精選影片卡片渲染（已修復 16:9 預覽畫面偏下問題） =====
+function renderVideos() {
+    const grid = document.getElementById('video-grid');
+    if (!grid) return;
+
+    grid.innerHTML = videosData.map((video) => `
+        <div onclick="openVideoModal('${video.id}', '${video.title}')" 
+             class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-pomelo-peel/20 flex flex-col justify-between">
+            
+            <!-- 影片預覽區塊（16:9 比例，放大並向上位移以將影像精準置中） -->
+            <div class="relative w-full aspect-video bg-pomelo-dark/5 overflow-hidden flex items-center justify-center">
+                <iframe 
+                    class="absolute inset-0 w-full h-full pointer-events-none scale-125 -translate-y-[8%] filter blur-[1px] opacity-80" 
+                    src="https://drive.google.com/file/d/${video.id}/preview" 
+                    title="${video.title}"
+                    tabindex="-1">
+                </iframe>
+                
+                <!-- 中央播放按鈕 -->
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                    <div class="w-14 h-14 rounded-full bg-pomelo-peel/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片底部標題與日期 -->
+            <div class="p-4 bg-white border-t border-pomelo-cream">
+                <span class="inline-block px-2.5 py-0.5 bg-pomelo-peel/10 text-pomelo-leaf rounded-full text-xs font-semibold mb-1">
+                    ${video.tag}
+                </span>
+                <h3 class="text-base font-bold text-pomelo-dark line-clamp-1 group-hover:text-pomelo-peel transition-colors">${video.title}</h3>
+            </div>
+        </div>
+    `).join('');
+}
+
+// ===== 開啟全螢幕影片彈窗 =====
+function openVideoModal(videoId, title) {
+    const modal = document.getElementById('video-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+    const modalTitle = document.getElementById('video-modal-title');
+    const directLink = document.getElementById('video-modal-direct-link');
+    
+    if (!modal || !iframe) return;
+
+    // 1. 動態更新標題與備用開啟連結
+    if (modalTitle) modalTitle.textContent = title;
+    if (directLink) directLink.href = `https://drive.google.com/file/d/${videoId}/view`;
+
+    // 2. 顯示 Modal 視窗
+    modal.classList.remove('hidden');
+
+    // 3. 載入 Google Drive 預覽網址
+    iframe.src = `https://drive.google.com/file/d/${videoId}/preview`;
+
+    // 4. 禁止背景網頁滾動
+    document.body.style.overflow = 'hidden';
+}
+
+// ===== 關閉全螢幕影片彈窗 =====
+function closeVideoModal() {
+    const modal = document.getElementById('video-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+    if (!modal || !iframe) return;
+
+    modal.classList.add('hidden');
+    iframe.src = 'about:blank'; // 停止背景聲音
+
+    // 恢復背景網頁滾動
+    document.body.style.overflow = '';
+}
+
+// 點擊 Esc 鍵亦可關閉全螢幕影片
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeVideoModal();
+    }
+});
+
         const photosData = {
             2025: [
                 /* 歷年採柚紀錄照片列表 */
@@ -1126,80 +1297,74 @@
         let currentActiveYear = 2025;
 
 function navigateTo(viewId) {
-            // 使用基礎名稱陣列，方便同時對應「視圖 ID」與「按鈕 ID」
-            const baseViews = ['home', 'data', 'photos', 'reports'];
-            
-            // 1. 隱藏所有視圖與移除動畫狀態 (保留您原本的邏輯)
-            baseViews.forEach(id => {
-                const el = document.getElementById(id + '-view');
-                if (el) {
-                    el.classList.add('hidden', 'opacity-0');
-                    el.classList.remove('opacity-100', 'translate-y-0');
-                }
-            });
+    const baseViews = ['home', 'data', 'photos', 'reports', 'videos'];
+    
+    // 💡 切換到精選影片頁面時，強制執行影片卡片渲染
+    if (viewId === 'videos') {
+        renderVideos();
+    }
 
-            // 2. 顯示目標視圖與觸發動畫 (保留您原本的邏輯)
-            const target = document.getElementById(viewId + '-view');
-            if (target) {
-                target.classList.remove('hidden');
-                setTimeout(() => {
-                    target.classList.remove('opacity-0', 'translate-y-4');
-                    target.classList.add('opacity-100', 'translate-y-0');
-                }, 50);
-            }
+    // 1. 隱藏所有視圖
+    baseViews.forEach(id => {
+        const el = document.getElementById(id + '-view');
+        if (el) {
+            el.classList.add('hidden', 'opacity-0');
+            el.classList.remove('opacity-100', 'translate-y-0');
+        }
+    });
 
-// 3. 切換導覽列按鈕的深色/外框狀態
-            baseViews.forEach(nav => {
-                // 抓取電腦版按鈕與圖示
-                const desktopBtn = document.getElementById(`nav-btn-${nav}`);
-                const desktopIcon = document.getElementById(`nav-icon-${nav}`);
-                
-                if (desktopBtn && desktopIcon) {
-                    if (nav === viewId) {
-                        // 被點選時：填滿黃色背景、文字變白、圖示變白
-                        desktopBtn.classList.add('bg-pomelo-peel', 'text-white');
-                        desktopBtn.classList.remove('bg-white', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
-                        desktopIcon.classList.add('text-white');
-                        desktopIcon.classList.remove('text-pomelo-pulp', 'group-hover:text-white');
-                    } else {
-                        // 未點選時：白底、深綠字、黃色小圖示 (Hover時才變白)
-                        desktopBtn.classList.remove('bg-pomelo-peel', 'text-white');
-                        desktopBtn.classList.add('bg-white', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
-                        desktopIcon.classList.remove('text-white');
-                        desktopIcon.classList.add('text-pomelo-pulp', 'group-hover:text-white');
-                    }
-                }
+    // 2. 顯示目標視圖
+    const target = document.getElementById(viewId + '-view');
+    if (target) {
+        target.classList.remove('hidden');
+        setTimeout(() => {
+            target.classList.remove('opacity-0', 'translate-y-4');
+            target.classList.add('opacity-100', 'translate-y-0');
+        }, 50);
+    }
 
-                // 抓取手機版按鈕與圖示
-                const mobileBtn = document.getElementById(`mobile-btn-${nav}`);
-                const mobileIcon = document.getElementById(`mobile-icon-${nav}`);
-                
-                if (mobileBtn && mobileIcon) {
-                    if (nav === viewId) {
-                        // 手機版：被點選時
-                        mobileBtn.classList.add('bg-pomelo-peel', 'text-white');
-                        mobileBtn.classList.remove('bg-transparent', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
-                        mobileIcon.classList.add('text-white');
-                        mobileIcon.classList.remove('text-pomelo-pulp', 'group-hover:text-white');
-                    } else {
-                        // 手機版：未點選時
-                        mobileBtn.classList.remove('bg-pomelo-peel', 'text-white');
-                        mobileBtn.classList.add('bg-transparent', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
-                        mobileIcon.classList.remove('text-white');
-                        mobileIcon.classList.add('text-pomelo-pulp', 'group-hover:text-white');
-                    }
-                }
-            });
-
-            // 4. 滾動至頂部 (保留您原本的邏輯)
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // 5. 關閉行動裝置選單 (保留您原本的邏輯)
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
+    // 3. 切換導覽按鈕選取狀態
+    baseViews.forEach(nav => {
+        const desktopBtn = document.getElementById(`nav-btn-${nav}`);
+        const desktopIcon = document.getElementById(`nav-icon-${nav}`);
+        if (desktopBtn && desktopIcon) {
+            if (nav === viewId) {
+                desktopBtn.classList.add('bg-pomelo-peel', 'text-white');
+                desktopBtn.classList.remove('bg-white', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
+                desktopIcon.classList.add('text-white');
+                desktopIcon.classList.remove('text-pomelo-pulp', 'group-hover:text-white');
+            } else {
+                desktopBtn.classList.remove('bg-pomelo-peel', 'text-white');
+                desktopBtn.classList.add('bg-white', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
+                desktopIcon.classList.remove('text-white');
+                desktopIcon.classList.add('text-pomelo-pulp', 'group-hover:text-white');
             }
         }
+
+        const mobileBtn = document.getElementById(`mobile-btn-${nav}`);
+        const mobileIcon = document.getElementById(`mobile-icon-${nav}`);
+        if (mobileBtn && mobileIcon) {
+            if (nav === viewId) {
+                mobileBtn.classList.add('bg-pomelo-peel', 'text-white');
+                mobileBtn.classList.remove('bg-transparent', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
+                mobileIcon.classList.add('text-white');
+                mobileIcon.classList.remove('text-pomelo-pulp', 'group-hover:text-white');
+            } else {
+                mobileBtn.classList.remove('bg-pomelo-peel', 'text-white');
+                mobileBtn.classList.add('bg-transparent', 'text-pomelo-leaf', 'hover:bg-pomelo-peel', 'hover:text-white');
+                mobileIcon.classList.remove('text-white');
+                mobileIcon.classList.add('text-pomelo-pulp', 'group-hover:text-white');
+            }
+        }
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+    }
+}
 
         function viewYearlyPhotos(year) {
             currentActiveYear = year;
@@ -1415,6 +1580,13 @@ if (elYears) elYears.innerText = '20'; // 固定顯示 20
         document.addEventListener('DOMContentLoaded', () => {
 // 加入這行，網頁載入時就去抓試算表資料
             fetchSheetData();
+document.addEventListener('DOMContentLoaded', () => {
+    // 網頁載入時同時抓取試算表與初始化影片
+    fetchSheetData();
+    renderVideos(); // 👈 新增這一行
+
+    // 行動裝置選單開關... (維持原本的不變)
+});
 
             // 行動裝置選單開關
             const btn = document.getElementById('mobile-menu-btn');
