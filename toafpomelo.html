@@ -246,22 +246,32 @@
                             </p>
                         </div>
 
-                        <div class="pt-4 flex items-center space-x-6 border-t border-pomelo-peel/15">
-                            <div>
-                                <span class="block text-2xl font-black text-pomelo-leaf">80+</span>
-                                <span class="text-xs text-pomelo-gray">歲堅守歲月</span>
-                            </div>
-                            <div class="h-8 w-px bg-pomelo-peel/20"></div>
-                            <div>
-                                <span class="block text-2xl font-black text-pomelo-leaf">20+</span>
-                                <span class="text-xs text-pomelo-gray">年無農藥耕作</span>
-                            </div>
-                            <div class="h-8 w-px bg-pomelo-peel/20"></div>
-                            <div>
-                                <span class="block text-2xl font-black text-pomelo-leaf">100%</span>
-                                <span class="text-xs text-pomelo-gray">全數公益捐贈</span>
-                            </div>
-                        </div>
+<!-- 農場主人故事區底部的數據統計 -->
+<div class="pt-4 flex items-center space-x-6 border-t border-pomelo-peel/15">
+    <div>
+        <!-- 動態數字 80+ -->
+        <span class="stat-number block text-2xl font-black text-pomelo-leaf" 
+              data-target="80" 
+              data-suffix="+">0+</span>
+        <span class="text-xs text-pomelo-gray">歲堅守歲月</span>
+    </div>
+    <div class="h-8 w-px bg-pomelo-peel/20"></div>
+    <div>
+        <!-- 動態數字 20+ -->
+        <span class="stat-number block text-2xl font-black text-pomelo-leaf" 
+              data-target="20" 
+              data-suffix="+">0+</span>
+        <span class="text-xs text-pomelo-gray">年無農藥耕作</span>
+    </div>
+    <div class="h-8 w-px bg-pomelo-peel/20"></div>
+    <div>
+        <!-- 動態數字 100% -->
+        <span class="stat-number block text-2xl font-black text-pomelo-leaf" 
+              data-target="100" 
+              data-suffix="%">0%</span>
+        <span class="text-xs text-pomelo-gray">全數公益捐贈</span>
+    </div>
+</div>
                     </div>
                 </div>
 
@@ -317,20 +327,21 @@
 <!-- 累積善業亮點卡片 (手機版圖示加大且垂直置中，電腦版維持原本樣式) -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8 md:mb-12">
     
-    <!-- 卡片 1: 累計重量 -->
-    <div class="bg-gradient-to-br from-white to-pomelo-cream p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-pomelo-peel/15 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 grid grid-cols-[1fr_auto] items-center gap-x-3 md:gap-y-1">
-        <span class="col-start-1 row-start-1 text-sm font-bold text-pomelo-leaf tracking-wider">累計護持重量</span>
-        <div class="col-start-1 row-start-2 flex items-baseline space-x-1 my-0.5 md:my-1">
-            <span id="milestone-weight" class="text-3xl sm:text-4xl font-black text-pomelo-dark">58,797</span>
-            <span class="text-sm font-semibold text-pomelo-gray">公斤</span>
-        </div>
-        <p class="col-start-1 row-start-3 text-xs text-pomelo-gray/80 md:col-span-2">大地無毒生機，滋養十方大眾</p>
-        
-        <!-- 小圖示：手機版跨3行垂直置中 + 放大；電腦版回到右上角與原始大小 -->
-        <div class="col-start-2 row-start-1 row-span-3 self-center md:row-span-1 md:self-start p-3 sm:p-3.5 bg-pomelo-peel/10 rounded-2xl text-pomelo-peel flex items-center justify-center shrink-0">
-            <i class="fa-solid fa-weight-hanging text-3xl md:text-xl"></i>
-        </div>
+<!-- 卡片 1: 累計護持重量 -->
+<div class="bg-gradient-to-br from-white to-pomelo-cream p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-pomelo-peel/15 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 grid grid-cols-[1fr_auto] items-center gap-x-3 md:gap-y-1">
+    <span class="col-start-1 row-start-1 text-sm font-bold text-pomelo-leaf tracking-wider">累計護持重量</span>
+    <div class="col-start-1 row-start-2 flex items-baseline space-x-1 my-0.5 md:my-1">
+        <span id="milestone-weight" class="text-3xl sm:text-4xl font-black text-pomelo-dark">58,797</span>
+        <span class="text-sm font-semibold text-pomelo-gray">公斤</span>
     </div>
+    <p class="col-start-1 row-start-3 text-xs text-pomelo-gray/80 md:col-span-2">大地無毒生機，滋養十方大眾</p>
+    
+    <!-- 右側圖示區塊 -->
+    <div class="col-start-2 row-start-1 row-span-3 self-center md:row-span-1 md:self-start p-3 sm:p-3.5 bg-pomelo-peel/10 rounded-2xl flex items-center justify-center shrink-0">
+        <!-- 💡 這裡把圖片尺寸改大了 (w-9 h-9 md:w-7 md:h-7) -->
+        <img src="https://paymiou.github.io/toaf-organic/pomelo2.png" alt="柚子圖示" class="w-9 h-9 md:w-7 md:h-7 object-contain">
+    </div>
+</div>
 
     <!-- 卡片 2: 累計參與人次 -->
     <div class="bg-gradient-to-br from-white to-pomelo-cream p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-pomelo-peel/15 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 grid grid-cols-[1fr_auto] items-center gap-x-3 md:gap-y-1">
@@ -671,8 +682,8 @@
     </div>
 </div>
 
-    <script>
-// ===== 1. 精選影片資料庫（YouTube ID 庫） =====
+<script>
+// ===== 1. 精選影片資料庫與渲染 =====
 const videosData = [
     { title: "美妹訪談-回饋佛菩薩", tag: "2014 訪談畫面", id: "P7QUzWCiUWQ" },
     { title: "一年一度採柚法會回顧影片", tag: "2015 採柚回顧", id: "12ysxAO0EaA" },
@@ -685,8 +696,6 @@ const videosData = [
     { title: "美妹種柚 ‧ 我護柚", tag: "2023 預購宣導片", id: "ojjIBcMhMCw" },
 ];
 
-// ===== 2. 精選影片卡片渲染（採用 YouTube 高畫質封面） =====
-// ===== 精選影片卡片渲染（右下角加入柚子小圖） =====
 function renderVideos() {
     const grid = document.getElementById('video-grid');
     if (!grid) return;
@@ -694,46 +703,23 @@ function renderVideos() {
     grid.innerHTML = videosData.map((video) => `
         <div onclick="openVideoModal('${video.id}', '${video.title}')" 
              class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-pomelo-peel/20 flex flex-col justify-between">
-            
-            <!-- 影片縮圖區塊 -->
             <div class="relative w-full aspect-video bg-pomelo-dark/5 overflow-hidden flex items-center justify-center">
-                <img 
-                    src="https://img.youtube.com/vi/${video.id}/hqdefault.jpg" 
-                    alt="${video.title}"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                />
-                
-                <!-- 中央播放按鈕 -->
+                <img src="https://img.youtube.com/vi/${video.id}/hqdefault.jpg" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                     <div class="w-14 h-14 rounded-full bg-pomelo-peel/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <i class="fa-solid fa-play text-xl ml-1"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 卡片底部標題與日期（含右下角柚子小圖） -->
             <div class="p-4 bg-white border-t border-pomelo-cream relative">
-                <span class="inline-block px-2.5 py-0.5 bg-pomelo-peel/10 text-pomelo-leaf rounded-full text-xs font-semibold mb-1">
-                    ${video.tag}
-                </span>
-                <!-- pr-8 防止長標題覆蓋右下角圖示 -->
-                <h3 class="text-base font-bold text-pomelo-dark line-clamp-1 group-hover:text-pomelo-peel transition-colors pr-8">
-                    ${video.title}
-                </h3>
-
-                <!-- 🍊 右下角柚子小圖 -->
-                <img 
-                    src="https://paymiou.github.io/toaf-organic/pomelo.png" 
-                    alt="柚子圖示" 
-                    class="absolute bottom-3 right-3 w-7 h-7 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 pointer-events-none"
-                />
+                <span class="inline-block px-2.5 py-0.5 bg-pomelo-peel/10 text-pomelo-leaf rounded-full text-xs font-semibold mb-1">${video.tag}</span>
+                <h3 class="text-base font-bold text-pomelo-dark line-clamp-1 group-hover:text-pomelo-peel transition-colors pr-8">${video.title}</h3>
+                <img src="https://paymiou.github.io/toaf-organic/pomelo.png" alt="柚子圖示" class="absolute bottom-3 right-3 w-7 h-7 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 pointer-events-none" />
             </div>
         </div>
     `).join('');
 }
 
-// ===== 3. 開啟 YouTube 全螢幕彈窗 (自動播放) =====
 function openVideoModal(videoId, title) {
     const modal = document.getElementById('video-modal');
     const iframe = document.getElementById('video-modal-iframe');
@@ -741,603 +727,101 @@ function openVideoModal(videoId, title) {
     const directLink = document.getElementById('video-modal-direct-link');
     
     if (!modal || !iframe) return;
-
-    // 更新標題與 YouTube 另開連結
     if (modalTitle) modalTitle.textContent = title;
-    if (directLink) {
-        directLink.href = `https://youtu.be/${videoId}`;
-        directLink.querySelector('span').textContent = '前往 YouTube 觀看';
-    }
+    if (directLink) directLink.href = `https://youtu.be/${videoId}`;
 
     modal.classList.remove('hidden');
-
-    // 帶入 YouTube Embed 播放器並開啟自動播放
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-
-    // 禁止背景網頁滾動
     document.body.style.overflow = 'hidden';
 }
 
-// ===== 4. 關閉全螢幕影片彈窗 =====
 function closeVideoModal() {
     const modal = document.getElementById('video-modal');
     const iframe = document.getElementById('video-modal-iframe');
     if (!modal || !iframe) return;
 
     modal.classList.add('hidden');
-    iframe.src = ''; // 清空網址以停止影片播放與聲音
-
-    // 恢復背景網頁滾動
+    iframe.src = '';
     document.body.style.overflow = '';
 }
 
-// 點擊 Esc 鍵亦可關閉全螢幕影片
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        closeVideoModal();
-    }
-});
+// ===== 2. 動態數字跑數 (Count-Up Animation) 機制 =====
+function animateCountUp(element, targetValue, duration = 1800, suffix = '', isFormatted = false) {
+    if (!element) return;
+    const start = performance.now();
 
-        const photosData = {
-            2025: [
-                /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/1-DMVJ5OXZx16OvJb29zzpmJ1tqC6gWZo" },
-  { url: "https://lh3.googleusercontent.com/d/1gY16ssyBWinx1HygfIPibSPtwFoVV3Kt" },
-  { url: "https://lh3.googleusercontent.com/d/1S30lZaxbokAMPjry8RridxZP76Oz5Ywd" },
-  { url: "https://lh3.googleusercontent.com/d/13WHkjbwy2sd-DQsdD3YGwrnoVi_RUO3i" },
-  { url: "https://lh3.googleusercontent.com/d/13aKnkraejjR-cXlFkdGF75eoJlBwuHuj" },
-  { url: "https://lh3.googleusercontent.com/d/1T18gjL5dqAXM35k4NDzByeTN3j8i93K4" },
-  { url: "https://lh3.googleusercontent.com/d/1V_pAqU1rQQpXwPGhM0fZ0zmxIHzJxJsb" },
-  { url: "https://lh3.googleusercontent.com/d/13ZojRs9JwDJIObMt6eOw6N__SiEB0VMT" },
-  { url: "https://lh3.googleusercontent.com/d/1DyiMbL5weGAp4leoN6QEeR_I3NECy0Qc" },
-  { url: "https://lh3.googleusercontent.com/d/1Oqf8N2dR4QrBiXX49UcCYTo2hAQuE7l6" },
-  { url: "https://lh3.googleusercontent.com/d/1W_P6SH-Z8_9KKpOnRbetBvSpsGiBn6aB" },
-  { url: "https://lh3.googleusercontent.com/d/1KZWJ4HSQvejcHkStO5ofG-nA9woBDSlQ" },
-  { url: "https://lh3.googleusercontent.com/d/1u2tT2Fx3H-vjbt28anA8EkO0cb182-M7" },
-  { url: "https://lh3.googleusercontent.com/d/16cqR7I9ZD4X2NP06EqzV2a18kMXOp4B0" }
-            ],
-2024: [
-    /* 2024 歷年採柚紀錄照片列表 (共 69 張) */
-    { url: "https://lh3.googleusercontent.com/d/10_XDWE-MqtQb9CeUagojdAoAJYHGDe4T" },
-    { url: "https://lh3.googleusercontent.com/d/1nTM39yHASNlZhtqksNXngC4VksS_E6WB" },
-    { url: "https://lh3.googleusercontent.com/d/18zN0gODx3Wymvhbf5XfDkNqy60vAKz1h" },
-    { url: "https://lh3.googleusercontent.com/d/16YXegW6L4pe1hCH5EnxkNQ9EUnN6Kd-e" },
-    { url: "https://lh3.googleusercontent.com/d/1HS_dl1hMtRH1IOV9b8AqSWPg105C1brv" },
-    { url: "https://lh3.googleusercontent.com/d/1ynTgV3saX8G5mMSxxrMyBab0WBOKADaT" },
-    { url: "https://lh3.googleusercontent.com/d/1fy3E3XOe9Mqz-u0t4VULjN3eH0_Cmuqm" },
-    { url: "https://lh3.googleusercontent.com/d/1zBMc-b_uFeEp1Y6rl_WMe3QskuiZ_txi" },
-    { url: "https://lh3.googleusercontent.com/d/1jPaB1uVoowiPiCjr9vST6A_UgEjmQciV" },
-    { url: "https://lh3.googleusercontent.com/d/1wHnczrhrdkcMhkq0Gn0YlTsbAnMHgCBf" },
-    { url: "https://lh3.googleusercontent.com/d/1JALzPMjU3RJ52Sb4mTCgM1DlNAazIePs" },
-    { url: "https://lh3.googleusercontent.com/d/1idvj5SpND3-XeyXNfJc__N8eZhg6ApNX" },
-    { url: "https://lh3.googleusercontent.com/d/10T-lacP9rxDoW0g93PBfXBOPu7YO7aen" },
-    { url: "https://lh3.googleusercontent.com/d/1FUIZSaFezg9D_DEB2P0utzSOfh2vzW60" },
-    { url: "https://lh3.googleusercontent.com/d/1Rjv93yG36JZm-ylV1R9tTXvcp4VdHoGG" },
-    { url: "https://lh3.googleusercontent.com/d/1mW0DFldT-fV0_kbul5AOrYwklNoCxkmO" },
-    { url: "https://lh3.googleusercontent.com/d/1qNSM1NIv4v3RMpyorWH8NMjGDaXOJq1s" },
-    { url: "https://lh3.googleusercontent.com/d/195YsTp9_97LTtCSDHSeODueVt8c4Pnnd" },
-    { url: "https://lh3.googleusercontent.com/d/1h6ctPrwQsBUfc5hKFmmDEj30qiXaGaTV" },
-    { url: "https://lh3.googleusercontent.com/d/1FBTh-bRIdZjVFsPFExldTKdYvtlbakDs" },
-    { url: "https://lh3.googleusercontent.com/d/17OZmQtKbm8YXLBsVvUxgMD7WkV847CdI" },
-    { url: "https://lh3.googleusercontent.com/d/1Q0HTnIOsfYNVp4izFR8ItY7gyxGrP3D7" },
-    { url: "https://lh3.googleusercontent.com/d/1_AyOakSrYyCtk5PJcrCrO29z9ZvkZdL7" },
-    { url: "https://lh3.googleusercontent.com/d/1kQ3jYBHhGfgP68NHxEwEoY1XkKhILEWh" },
-    { url: "https://lh3.googleusercontent.com/d/12PN09hBxdxjh_JuvlOGlx7M2QYIvvmGC" },
-    { url: "https://lh3.googleusercontent.com/d/1Do-0gZSfyeWyB_nzAKcq8grxDogH82Y1" },
-    { url: "https://lh3.googleusercontent.com/d/1tPc_4DMZZpUJ8Znwi-6g1OuDtOf_tANp" },
-    { url: "https://lh3.googleusercontent.com/d/1e4X6J0ZfIzKbDDXogBuwQRRHe14OpvVv" },
-    { url: "https://lh3.googleusercontent.com/d/14BF6A1B6XniHNC2QmsFYme8gUCN05xdk" },
-    { url: "https://lh3.googleusercontent.com/d/1IDsP6E6Wfjadt0POVXjnf6cOyJHkeD63" },
-    { url: "https://lh3.googleusercontent.com/d/1EciSNhQf8ENyZSpP4CWk_e39_S7ZqX3g" },
-    { url: "https://lh3.googleusercontent.com/d/1YtezWunANHEQqjJsKuVtPJJaQc9o6w5F" },
-    { url: "https://lh3.googleusercontent.com/d/1PCeQwz5GRYrgf_DJtrn2S8rHDHq4TwJ-" },
-    { url: "https://lh3.googleusercontent.com/d/1bg_eau5LYC198pnuudjHBIOIpJYb-wWY" },
-    { url: "https://lh3.googleusercontent.com/d/1tFy8HWWp6I-xyLOYBd9nI98gCUvMqzsv" },
-    { url: "https://lh3.googleusercontent.com/d/1gXQK5ecZGSprLO1cGst0t48b3bq8TSqM" },
-    { url: "https://lh3.googleusercontent.com/d/16CNW91fgKr-OBoII109YUspimInnt19C" },
-    { url: "https://lh3.googleusercontent.com/d/1MtWUqpyy6tYefp2VjbNhALv7gLHY3JWN" },
-    { url: "https://lh3.googleusercontent.com/d/1XexrIkXzlMuJhbQ9JmyfReJ-5_XUG2m4" },
-    { url: "https://lh3.googleusercontent.com/d/11TN9w3WlCXRj-Y8cTRWaH_VBQkEhBUTy" },
-    { url: "https://lh3.googleusercontent.com/d/1XDeq_qQKfaqht1QKoLQ4lIiTWx1J4FV1" },
-    { url: "https://lh3.googleusercontent.com/d/1XtEAy-wjqwiMZoC0pidTDFXkW_tysGTM" },
-    { url: "https://lh3.googleusercontent.com/d/1udfe2VmEW_Avh4ClD1upXpeG6km07NpZ" },
-    { url: "https://lh3.googleusercontent.com/d/1Bxo39p-cBrl0PaYHPCIGhAll9LvqvElH" },
-    { url: "https://lh3.googleusercontent.com/d/19gdYLW4XC_aYL8Et3uMlF7nu9xK_Q-jz" },
-    { url: "https://lh3.googleusercontent.com/d/16YoiOmqmihfKMyTkrB004I_u4rYSBZ34" },
-    { url: "https://lh3.googleusercontent.com/d/16G7RHfHMkAOSYusUV01czdk_RI1USXwy" },
-    { url: "https://lh3.googleusercontent.com/d/1d-zlG47Dj0WBoMdgZbOqiM-D_VYITVBt" },
-    { url: "https://lh3.googleusercontent.com/d/1i6r-M5OT2czhhQ1rh9boO6_OwOCdvoLY" },
-    { url: "https://lh3.googleusercontent.com/d/1LC7SZ5L39ogZrkmJ_xZuyQKFu-zyP3go" },
-    { url: "https://lh3.googleusercontent.com/d/1h8h1iEu8BIVF2QNS9nU2zchlvGmXCXso" },
-    { url: "https://lh3.googleusercontent.com/d/1y8Kxz1OtrnXN1jOLbzKTn4Jx33BkclmH" },
-    { url: "https://lh3.googleusercontent.com/d/1NKqOR3R0RuU4DGp7J_PSgmrJz3LBhQTC" },
-    { url: "https://lh3.googleusercontent.com/d/1qlNUE6B1iMNSatKhtNdhGnOA-KTVXPw_" },
-    { url: "https://lh3.googleusercontent.com/d/1h0lb7Z9inZrMpJnVqu-adRX6GbJTAJAB" },
-    { url: "https://lh3.googleusercontent.com/d/1TJm3DsAmq9lwdYTVVN7IhOvQsdWRuPiH" },
-    { url: "https://lh3.googleusercontent.com/d/16Oguj7HrYQ7t6LbthGDJQERhX8HZDC7Z" },
-    { url: "https://lh3.googleusercontent.com/d/13ItgD53oxkyrhhIuGXbBw9rUkmvwWJmc" },
-    { url: "https://lh3.googleusercontent.com/d/1L6ZR4WMWBf1rgtqm93WUwAPEUg3MM0WN" },
-    { url: "https://lh3.googleusercontent.com/d/1I-afYUYKx2rM9JwGZdGapHImWmFLpZNx" },
-    { url: "https://lh3.googleusercontent.com/d/1o8yNpVhFP56gm4tqixhNodxZAwGK9STx" },
-    { url: "https://lh3.googleusercontent.com/d/1cHYWV_h3RRXNg_ImeeT17f_leVGYJGnI" },
-    { url: "https://lh3.googleusercontent.com/d/1m51Jz7mVJNB0rEhYotbAnz9bee4YX27S" },
-    { url: "https://lh3.googleusercontent.com/d/1VsvtnVK4EcVtdYiVFOp0OHDZrVSMgDuI" },
-    { url: "https://lh3.googleusercontent.com/d/1iSNDYi6keLzGESJQgsME_n_R-rebGmrK" },
-    { url: "https://lh3.googleusercontent.com/d/1NQuYI81CuVirRV2xAkb2L16c-5HhsfG_" },
-    { url: "https://lh3.googleusercontent.com/d/1ouMHWcXqvR9vd96HeezXmlgnN9Pwq_VC" },
-    { url: "https://lh3.googleusercontent.com/d/1RzfL2hzUFbHcqG2qLYrBafwy2NF6gJl7" },
-    { url: "https://lh3.googleusercontent.com/d/16UWGQow4CROSqVyRIRXwZG_gZBIQgVFQ" },
-],
-            2023: [
-                /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/1uISaOf0MdLUP5gKTdlZm7ICJPPV4jtNX" },
-  { url: "https://lh3.googleusercontent.com/d/1ckrXTz4FNHtRYw3gQLc5qBN6ztPiSOH9" },
-  { url: "https://lh3.googleusercontent.com/d/1FadDVWOrmjgyVpHar-pfFGyGmt44BKjZ" },
-  { url: "https://lh3.googleusercontent.com/d/1XMZvXdQ-0Ja-8sm8Bmy1L_Ogwy9cxtmi" },
-  { url: "https://lh3.googleusercontent.com/d/1B5kt0rzSAHCxGWLGdSA8_oFuz-uTyqtM" },
-  { url: "https://lh3.googleusercontent.com/d/1hkOx6dyvNM1lekqCbWzsoQHRBKTS8Jam" },
-  { url: "https://lh3.googleusercontent.com/d/1duAeo2GL3YK4wLgnYF6KWjdIZkyeeHqX" },
-  { url: "https://lh3.googleusercontent.com/d/1yQPjqjjbA0Dirq0RZgyAlohTfpyBV2TV" },
-  { url: "https://lh3.googleusercontent.com/d/1N0v_esdQoh1uIgFY3q9lsblOpMSlRO8V" },
-  { url: "https://lh3.googleusercontent.com/d/1MzbagkTGPGorheNHv8PpM2hCveNRLSCa" },
-  { url: "https://lh3.googleusercontent.com/d/1Cb6iCnJehVPRndGd-JQYgcdVBuJEsL_M" },
-  { url: "https://lh3.googleusercontent.com/d/1CsxA3sWEN3EVr58QdrcDGgwf-lyd6gIo" },
-  { url: "https://lh3.googleusercontent.com/d/1BMTM2NNVeW_0-643TfK0klWcQ_GDEwAR" },
-  { url: "https://lh3.googleusercontent.com/d/1Gwhb2GtjaUgaDYjh5dJFI-4m-Oa2WQam" },
-  { url: "https://lh3.googleusercontent.com/d/1ajWdTrSXonF6EHspRDUomSPLfA7Kc4_u" },
-  { url: "https://lh3.googleusercontent.com/d/1a1cCuYyCp8qNvj9tNBJ_koPTRVrIgLg1" },
-  { url: "https://lh3.googleusercontent.com/d/1k9b-2RYcaHctGQGpkHn2ap4EQpss4spN" },
-  { url: "https://lh3.googleusercontent.com/d/1ZlMnOM0V_sD1y3F_0fNV78CFpA3K6Grt" },
-  { url: "https://lh3.googleusercontent.com/d/1cFwVnx6qjNlbLwMHsBdRYIbjxo1ynIzj" },
-  { url: "https://lh3.googleusercontent.com/d/1-66JGuwCPBIaPvgDqL1WUJuLFq8X3khj" },
-  { url: "https://lh3.googleusercontent.com/d/1F9hr4T0hsJyJAdjJQq2_K8Uo2BkaHF-n" },
-  { url: "https://lh3.googleusercontent.com/d/1b8p71uIsnWiYm4zJgBhExWd5QPsThyW5" },
-  { url: "https://lh3.googleusercontent.com/d/15OKrqd0g_6IjpWpEeM1L946Tz8Okt74m" },
-  { url: "https://lh3.googleusercontent.com/d/1AzLiDH4Tjc0LCIBsxvbUFKnVC7uBXAUS" },
-  { url: "https://lh3.googleusercontent.com/d/1DIG54KuInysj8IkXPLRA_3gUP78laDkR" },
-  { url: "https://lh3.googleusercontent.com/d/1jpUpi32yVPIZwcxmW1f6SFohO9sAlFAs" },
-  { url: "https://lh3.googleusercontent.com/d/1Fn6HE4hFOkkzm919Z_Ziyb0_BBI80aPk" },
-  { url: "https://lh3.googleusercontent.com/d/1gxntPBYqiKM0q0b5Nw8wL3Gfewr90lME" },
-  { url: "https://lh3.googleusercontent.com/d/143d0NT30CGiZzQZz2sBx6qSaNJP5KgBl" },
-  { url: "https://lh3.googleusercontent.com/d/12hKxGItXxceoLdxH5PN4qY9IgvduYj8E" },
-  { url: "https://lh3.googleusercontent.com/d/1zkUbgn4uCSruyeuuz1bEWOsU4VK2RL_h" },
-  { url: "https://lh3.googleusercontent.com/d/1EywdLL9Ze7AybH5xxGaOxGbdV7iVV34I" },
-  { url: "https://lh3.googleusercontent.com/d/11YHjCGGPcxwYwR_MGqyFo23CW0RUqK1i" },
-  { url: "https://lh3.googleusercontent.com/d/1DN4_-xjiWxfg73eQ8CxcQ_pGqQ5zV2z8" },
-  { url: "https://lh3.googleusercontent.com/d/1dtZv83yLuDockTz4gvXsM_zYBKYFNN1n" },
-  { url: "https://lh3.googleusercontent.com/d/1L6kPaELaa3SdqQR_euEU5bAtWVwG_HZY" },
-  { url: "https://lh3.googleusercontent.com/d/1TPiY5UGbkct_tGzf_jM3NsV-fhNVd51c" },
-  { url: "https://lh3.googleusercontent.com/d/1yRfv2lXqdbwwKqCELiSoiEZz9ChmbcyX" },
-  { url: "https://lh3.googleusercontent.com/d/1JPoj7-PmC7_1JYmY9KSPe5nncRpZ37kv" },
-  { url: "https://lh3.googleusercontent.com/d/1PhlrZF-sUjvPe95ZYEuNwbKWDLLYvtVM" },
-  { url: "https://lh3.googleusercontent.com/d/19z_oubeE3qmO6jjj9-Rvfk8Uqb7OoMaO" },
-  { url: "https://lh3.googleusercontent.com/d/1-rXyzW-cYhfTAkIN8bu0pfWmPWiR3m69" },
-  { url: "https://lh3.googleusercontent.com/d/1JfvHMle_X4mO7hm_6188uOft7vDjHsVS" },
-  { url: "https://lh3.googleusercontent.com/d/1j4CbKgV-N9AyIkPlOvGmd6RBDAS7pA-P" },
-  { url: "https://lh3.googleusercontent.com/d/1GEw59MNe6IYcO_BG1WyetBVG33TRy_iQ" },
-  { url: "https://lh3.googleusercontent.com/d/1DAdld76XfQ36OqgbY4FHRUsC0gLBQSzp" },
-  { url: "https://lh3.googleusercontent.com/d/1qoQC-VhYA1bXtpE90majNw_cmFvjViHr" },
-  { url: "https://lh3.googleusercontent.com/d/13K_2I2Gq_7llH2iyky5yD1gRN5IXzKXx" },
-  { url: "https://lh3.googleusercontent.com/d/15aoZxMpmFE99WAo2gvag1FXcsfHsKYga" },
-  { url: "https://lh3.googleusercontent.com/d/1QKc-oyu5prR_cIZCBFYX-EialcQwGrvA" },
-  { url: "https://lh3.googleusercontent.com/d/1Y0WGHOYQOj13D2Rjh4XSUHbCJC2EAA2Y" },
-  { url: "https://lh3.googleusercontent.com/d/1wtW168el-56ZGWOQiJDuCWMpN3tX4MkA" },
-  { url: "https://lh3.googleusercontent.com/d/18hGxWMVSmAZyZTQT9XdB9FXbmE184SR6" },
-  { url: "https://lh3.googleusercontent.com/d/1FvHi__fLR881hDYc8XrZSKdOwxDN8bHp" },
-  { url: "https://lh3.googleusercontent.com/d/1nzOo1cnOiVW8rQr6Ehf_s7CBEE53ujNz" },
-  { url: "https://lh3.googleusercontent.com/d/11UXK5dM0R5TM5D7fajlAKZIFJiPv-YFb" },
-  { url: "https://lh3.googleusercontent.com/d/1h6gBqMur5iq9hyMvpLLyniQl2ZoLbJsM" },
-  { url: "https://lh3.googleusercontent.com/d/1rgKIBjKo80SARrdZKcqoxUM44G5ZXWLk" },
-  { url: "https://lh3.googleusercontent.com/d/1Jbo9uzcre_vFweZlxSwgDTV6Z4eK2m1I" },
-  { url: "https://lh3.googleusercontent.com/d/1-OmqSbVtJ6kcQH-R6VhzpRrtzRK-3kVg" }
-            ],
-            2022: [
-                /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/1HgZdlu13WRrqcRyIJI-K3uBYFC1brMRn" },
-  { url: "https://lh3.googleusercontent.com/d/1MKmrCmKxf9UoKT3nusiXn5KY0z8elg3N" },
-  { url: "https://lh3.googleusercontent.com/d/1rPH-NUkJVdCxc7gvDVU5PwTJfBZxwj2l" },
-  { url: "https://lh3.googleusercontent.com/d/1zrV6IvBLECV1Vrg5fIKfDT0d3QinjkSB" },
-  { url: "https://lh3.googleusercontent.com/d/1TMGIbgXCMhE-fNSPYw29wW6tbIhMT3XZ" },
-  { url: "https://lh3.googleusercontent.com/d/1vj9DAFoM3W6aDvRPo3W2UeCu5gmkqfnc" },
-  { url: "https://lh3.googleusercontent.com/d/12IqlsaYBVKOllkGDSf6dUlK2GQHvJs5N" },
-  { url: "https://lh3.googleusercontent.com/d/1cwifc3ps528VbzhhMOUpx0l7vU94THQF" },
-  { url: "https://lh3.googleusercontent.com/d/1GH2lJQwASkK6tDI8MA-kokSgLNAP4XIe" },
-  { url: "https://lh3.googleusercontent.com/d/1bzoUxy7LaGa_-QlNu3RCguqB5NZ_Ir90" },
-  { url: "https://lh3.googleusercontent.com/d/1d6QfuPPxWNW2ipHBLRazxdnd-mJYPNg1" },
-  { url: "https://lh3.googleusercontent.com/d/1UXpfAYXeA8NlkwNw582o_IlyyQJE1y3l" },
-  { url: "https://lh3.googleusercontent.com/d/1HeQnlawgaJq726tP7qiXHwUR1SXiDadJ" },
-  { url: "https://lh3.googleusercontent.com/d/15dwG7ljAAo_Hqo9v7IutaYJ0SSZePNOn" },
-  { url: "https://lh3.googleusercontent.com/d/1hKmG7M2nXDnFJguxIfbljVaULSqSnXkz" },
-  { url: "https://lh3.googleusercontent.com/d/19siN1NuwA89bh1oyK4uOA16XHlHEgDSC" },
-  { url: "https://lh3.googleusercontent.com/d/1lmMgORdeNuq6HlHzutcFMX7wgSALPN1f" },
-  { url: "https://lh3.googleusercontent.com/d/1ZCAsSpLvYO3m1yLt-cqB9GFEYY3OpxuL" },
-  { url: "https://lh3.googleusercontent.com/d/1qd93hEMEef0J_PL2jUEjkmbB45C0YgUJ" },
-  { url: "https://lh3.googleusercontent.com/d/1snUmlT0xDqwlhlt-KLxibxfeLHWEOwdm" }
-            ],
-            2021: [
-               /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/1cJhdxPh14j4icDnyF-wLFNfRr1pQsY2j" },
-  { url: "https://lh3.googleusercontent.com/d/1kBiou_SUyoQ8bHK8XRECG45YQTReYGrZ" },
-  { url: "https://lh3.googleusercontent.com/d/1e99ZoDxLFKcgVK35yAyHLQ0IZ6MXGuU8" },
-  { url: "https://lh3.googleusercontent.com/d/1XnshRu2iOyEDzESq0s9gwOGLWR7XhSic" },
-  { url: "https://lh3.googleusercontent.com/d/1Bjrh2gMug9Klf8yMbWwz3ynqKrzgR3-u" },
-  { url: "https://lh3.googleusercontent.com/d/14ZzqlXJ2g6NRjGKKUzOo7WPO_qnMl_DH" },
-  { url: "https://lh3.googleusercontent.com/d/1u6EYF5YHGS2OR3HRCT7xU9My1g09G-pC" },
-  { url: "https://lh3.googleusercontent.com/d/1F6deH6edcjq-s6UJtKv-qkBSb2YMjoMf" },
-  { url: "https://lh3.googleusercontent.com/d/11C2KFuO48gFx5c7HLURESqm0vV0B8cfZ" },
-  { url: "https://lh3.googleusercontent.com/d/1Ie7lGq-0W7YcpxxhaxWmo3qi8zHxUi3d" },
-  { url: "https://lh3.googleusercontent.com/d/16g2_mt88CBhDTcbvEUkI5Eou2dN67mC7" },
-  { url: "https://lh3.googleusercontent.com/d/1KcgTp4nbOUZj5zPtrbz85RY2-tWw39fZ" },
-  { url: "https://lh3.googleusercontent.com/d/1xZX2yjSlkgMGPdTtO2HJa9VbjQ_zy4pT" },
-  { url: "https://lh3.googleusercontent.com/d/1q0JMksfNcEauuyC145iZaP6R--ymnSeh" },
-  { url: "https://lh3.googleusercontent.com/d/1EYKUg0pv_J6W2pnnd6nH7-8b2sllLdWC" },
-  { url: "https://lh3.googleusercontent.com/d/13l5_LMmlW2qy9AH_3S-Qti_n5xKSI-GH" },
-  { url: "https://lh3.googleusercontent.com/d/1Yg1vMphoceSPYF1U3V7DiwGkEbTCFsxW" },
-  { url: "https://lh3.googleusercontent.com/d/1cpyaOe-gFI4ANlvFAFXPDwl_Y0xEqozf" },
-  { url: "https://lh3.googleusercontent.com/d/1aC0FEiaAqSNF5ECjRKBhOQb8wNtHAQF8" },
-  { url: "https://lh3.googleusercontent.com/d/1Owtfz4zR3HTYUCfFGOvzcd-XR3_IehoF" },
-  { url: "https://lh3.googleusercontent.com/d/10i5PwHnYSY7x9EUpoHjFuVyi4rtPcERG" },
-  { url: "https://lh3.googleusercontent.com/d/1xKcKVbVLTvmWgukBlcf9czJB9WdNHJIK" },
-  { url: "https://lh3.googleusercontent.com/d/1SyqyrNOlnQD46h9C10nW6B5AUa8p6KTT" },
-  { url: "https://lh3.googleusercontent.com/d/1ImOMWs2GBo3ohSuyKb1v-mFcHCSGWaYd" },
-  { url: "https://lh3.googleusercontent.com/d/1xcr_vszaYljQOK3InW1USfWiwgn95psS" },
-  { url: "https://lh3.googleusercontent.com/d/1i9O7Li8b2Gsx0jvJF6cfFThKX3bN6a3_" },
-  { url: "https://lh3.googleusercontent.com/d/1vKiYFGcbT3MiauYZ1rNoBE7G5LpNeU2F" },
-  { url: "https://lh3.googleusercontent.com/d/1vLhKSYC9Ry-Wu7tpsnk1avH9FX9-MNW9" },
-  { url: "https://lh3.googleusercontent.com/d/13C6LW19Ei9JaDJGTCcY3BalF2IBrqBfh" },
-  { url: "https://lh3.googleusercontent.com/d/1p_bCG8HIT6hpQERpgJSlxg7rCRYHm4T2" },
-  { url: "https://lh3.googleusercontent.com/d/1zdQdwuou6tNLEtRdFw60KeKa2_9TIMxR" },
-  { url: "https://lh3.googleusercontent.com/d/1vi-FNy38LSuN08r3ApsXUSb6wp9bRMxr" },
-  { url: "https://lh3.googleusercontent.com/d/1ZZd6ti1jVdv_AqR_nwsjugmBrsJlg7id" },
-  { url: "https://lh3.googleusercontent.com/d/1GcWJ6rs__pBkJk1dsM86ye1eX0Vbzf0Y" },
-  { url: "https://lh3.googleusercontent.com/d/1dX6a1viXmRUWQ-3G7vdL8xFWQHSNHe6l" },
-  { url: "https://lh3.googleusercontent.com/d/17J0WXmTQPQe1qB4ZYUXq_G8dMzPmLqyP" },
-  { url: "https://lh3.googleusercontent.com/d/1VGXbiENrjESFNO8aAIfWX7uZ5z4V4q7y" },
-  { url: "https://lh3.googleusercontent.com/d/1yrTtYldaGNNnJV00P4DObiO-LIMT3g96" },
-  { url: "https://lh3.googleusercontent.com/d/1mGKzC61j0DCNzf0HO8pWmYJ635qkZyF6" },
-  { url: "https://lh3.googleusercontent.com/d/1NfTpJ92sD40_BuEBmumcXNHtkEfVUCmI" },
-  { url: "https://lh3.googleusercontent.com/d/1kxL6vX50oEM9pQYwSA0SOyD6AuOWv3_L" },
-  { url: "https://lh3.googleusercontent.com/d/1ADpghV7yxNSAWn_-rnio2d6ZPp4NQoFB" },
-  { url: "https://lh3.googleusercontent.com/d/1MQnx_eeDLgWTmbBfpEh6LkvEldAnevnV" },
-  { url: "https://lh3.googleusercontent.com/d/1kYdqFby3rRDxad1wOiOl2-Adhv3UXJ8h" },
-  { url: "https://lh3.googleusercontent.com/d/1XbKM_IDwPYcGOl2mabWUcAshzU8yH-rT" },
-  { url: "https://lh3.googleusercontent.com/d/1hoHpMOYCMukxWuLGSpt9scqcJc0DQz9X" },
-  { url: "https://lh3.googleusercontent.com/d/1yn5n11T5QYMWzJiQVC_Iu-ivB-x4EOHu" }
-            ],
-            2020: [
-                /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/1bR1Y1CWhjpcNI7gygTRdyl3hBExSqoGZ" },
-  { url: "https://lh3.googleusercontent.com/d/1P6GCfXPsMPivMcEr1R2jiGl5uiZj-2F8" },
-  { url: "https://lh3.googleusercontent.com/d/1BBsF_f7osezkPQp9xULlYAY8KBckyVrh" },
-  { url: "https://lh3.googleusercontent.com/d/1IJ-j7yRWW9RwXgxV1kXCWBoWnB5kd4mz" },
-  { url: "https://lh3.googleusercontent.com/d/1QwFPUuXx-EwvIAAndDagLT_ipfBuM-cX" },
-  { url: "https://lh3.googleusercontent.com/d/15ZUOShqEPM3BKK6krnVoyn6NPIg_jF1n" },
-  { url: "https://lh3.googleusercontent.com/d/1QRk_7R1efJrhvlIM_JFh4T2VmfAmmf-M" },
-  { url: "https://lh3.googleusercontent.com/d/17mCRCHrg-GiMI3gJuyb0TsazTAvfCY-w" },
-  { url: "https://lh3.googleusercontent.com/d/10Sc63EGNH6mm_395zClX5Lc3KjMTEhn3" },
-  { url: "https://lh3.googleusercontent.com/d/1ka3Hc-vi1lXEoPm13yGzAodToVsgNGfI" },
-  { url: "https://lh3.googleusercontent.com/d/1qPKhoYFi5c1jHRytvmua5Kvkz5ISUnt7" },
-  { url: "https://lh3.googleusercontent.com/d/1m4jBS2yqpleXmYDKEkoo-AVhdj1yaOX8" },
-  { url: "https://lh3.googleusercontent.com/d/198juWmkxAKhe3eaOMiC06sqYATHfl4-_" },
-  { url: "https://lh3.googleusercontent.com/d/1iGKgbxtOZfrDANueLkKSL94c8SlUmLtC" },
-  { url: "https://lh3.googleusercontent.com/d/1b3jLIph3LobgupNkINw9jsXm0BmpZJoN" },
-  { url: "https://lh3.googleusercontent.com/d/1f0J5HuidUVCK2Ng3SNuYwjOfL00rxMYc" },
-  { url: "https://lh3.googleusercontent.com/d/1QUi_x4TPPvLa5S_aAUUhFjS49SbnL314" },
-  { url: "https://lh3.googleusercontent.com/d/1ouN1N7uPWIJka0WimZMr1a7Qp8DXJhsr" },
-  { url: "https://lh3.googleusercontent.com/d/1rZqOkQL9O0lJXGm5AYCcQVSG7uKS7nTo" },
-  { url: "https://lh3.googleusercontent.com/d/1ZyDFf2LkUVAja9xZBNP5yUG11Rl8CwXF" },
-  { url: "https://lh3.googleusercontent.com/d/1BU2-F4QH78xthFtJZMFIDIjrnvs7o-Xl" },
-  { url: "https://lh3.googleusercontent.com/d/1rcgn8doohPcnta-fyvVC2e_zvuS-foTn" },
-  { url: "https://lh3.googleusercontent.com/d/19TyJ0_2K11XC_fD-sTjqFvgO9QSrI3PG" },
-  { url: "https://lh3.googleusercontent.com/d/1zbkEUCQoWVxJPDFnyJew2A8RAUm2DOUG" },
-  { url: "https://lh3.googleusercontent.com/d/1IpT4JoZAAqRbnfF4VsE02LKZuuCKlwHZ" },
-  { url: "https://lh3.googleusercontent.com/d/1q9r7W6kiQmJypbq94FDKdiVR-kpefFA4" },
-  { url: "https://lh3.googleusercontent.com/d/1y4n0nSRnAO52HOTbvsDr5KFgGQMxweAB" },
-  { url: "https://lh3.googleusercontent.com/d/1t407wNXcMVGQnknaOsj1Ejtjj5un6fzZ" },
-  { url: "https://lh3.googleusercontent.com/d/1VJ1Exbvb3XBHer-PkkfLgVzy1zSFzCUJ" },
-  { url: "https://lh3.googleusercontent.com/d/1q28CUGiXCRq4N-gZ4W2jZZg86p606H5U" },
-  { url: "https://lh3.googleusercontent.com/d/1AaHG-aj5r1jsU2wCpdNSx4LXeaP3phgb" },
-  { url: "https://lh3.googleusercontent.com/d/1ydnSYa7lH2oYLyDq3O9bIvTI66tUIqAd" },
-  { url: "https://lh3.googleusercontent.com/d/1JJP1o_FQZr507mfvu4x8NIm_EiCHV-pR" },
-  { url: "https://lh3.googleusercontent.com/d/1sj7DxoV9WICkZ7m5RdvYX9NMuI68X3CV" },
-  { url: "https://lh3.googleusercontent.com/d/1KmqoDdU6xH12PWZ_d0fWFChLH1VAyvqC" },
-  { url: "https://lh3.googleusercontent.com/d/1B6oay2SrsQZNFtLPsEXBKisluQxno0sa" },
-  { url: "https://lh3.googleusercontent.com/d/1toKtQYj66GqZsUHHihpOf29apsQg0u5l" },
-  { url: "https://lh3.googleusercontent.com/d/1Rms_Hw1nIo3RRuEbaaKGEXQDeB_cxLQX" },
-  { url: "https://lh3.googleusercontent.com/d/12mooIDPO2SH6qbYijWmBriDKyKUdMyu8" },
-  { url: "https://lh3.googleusercontent.com/d/1f0HTfAZTCbg9wIFHe_VykrbpFa9OBzeN" },
-  { url: "https://lh3.googleusercontent.com/d/1ucQoQo-yvu3TcbCKvoDRtyviGDK65Am_" },
-  { url: "https://lh3.googleusercontent.com/d/1w5U_bp724pciLmq9IJ_TYQs6tGmVp8Fy" },
-  { url: "https://lh3.googleusercontent.com/d/1IVx_O5SAj7HUTg8R8TT3OuINaWYITW_u" },
-  { url: "https://lh3.googleusercontent.com/d/1r6LupiWPHZumhkj_Whb6rAV81id1YYn_" },
-  { url: "https://lh3.googleusercontent.com/d/1R3FrdVbSO_uZDGY0zucRuk2qeKfn8A65" },
-  { url: "https://lh3.googleusercontent.com/d/1ZesVk3IwwOLPwpFuLaa8KWvMJ6StgbmR" },
-  { url: "https://lh3.googleusercontent.com/d/1qaFLtS7wo2miQ0wullO_IPlXys1s41iZ" },
-  { url: "https://lh3.googleusercontent.com/d/1TOqIeH2RT5ApYIHfUJfE5uwXGiYls1gP" },
-  { url: "https://lh3.googleusercontent.com/d/19cVpH4gtKDHyQ2f5xBzwPZ64kN-CgVmb" },
-  { url: "https://lh3.googleusercontent.com/d/12OUgHnnW1weiTEXcSZRuQuEjP_qBM22U" },
-  { url: "https://lh3.googleusercontent.com/d/1z0FzrSu52LiWYbnRFH7YdyPFL42Zp8h9" },
-  { url: "https://lh3.googleusercontent.com/d/1eUl3voRbr6usQvWfnUmPwPLi0VuZA_C4" },
-  { url: "https://lh3.googleusercontent.com/d/1wThQ9zz8cK0rNkhRkeF9e2o9pzTJQ4Uy" },
-  { url: "https://lh3.googleusercontent.com/d/1M40KW_EoOBrgA2YDqxAhZWjBglfFwQkW" },
-  { url: "https://lh3.googleusercontent.com/d/1BCB_X6C22XK3cSmyz1A2Ze5FvWTcBpuy" },
-  { url: "https://lh3.googleusercontent.com/d/1orsvmOLa5VxVtGjBZbkDFjuhn460BNEb" },
-  { url: "https://lh3.googleusercontent.com/d/19xpzrQ0rfB5nWJCZgGyQdfT65j3Zm3Cx" },
-  { url: "https://lh3.googleusercontent.com/d/1YPf0g4lnzloJN01HOHab-EOgtcmwMJlq" },
-  { url: "https://lh3.googleusercontent.com/d/1frWkaO9KqLj5XzWEJnoDFHg8RRR4Olmn" },
-  { url: "https://lh3.googleusercontent.com/d/12BsC-iGG1MDcJumstM6odoBD6kYFVd5o" },
-  { url: "https://lh3.googleusercontent.com/d/12THrayWvs_em_U1aF-HA2BoevDF6Om3t" },
-  { url: "https://lh3.googleusercontent.com/d/100jFWmK0WK8WS7oWF4ehUGe8w3PEr2c1" },
-  { url: "https://lh3.googleusercontent.com/d/1i6c4gDp-cCnvpdX9pUkVj4cDzzGu9-GL" },
-  { url: "https://lh3.googleusercontent.com/d/1MK2H2AvZSGzXI1fXIIAsvcT3mscJlYEX" },
-  { url: "https://lh3.googleusercontent.com/d/1zXr17JX7gPiSpB6X2WFK8dsKwNa1glsL" },
-  { url: "https://lh3.googleusercontent.com/d/1UT9XwcTrXsFOrSdEdvPN3Q0d1dL-lT2q" },
-  { url: "https://lh3.googleusercontent.com/d/12Yq9F0YR2vqDJ9e1T29H-ojRE6kxbxQ0" },
-  { url: "https://lh3.googleusercontent.com/d/1GIJ_hxJ3iqsI0LvoppkoDD5SOcSgWROn" },
-  { url: "https://lh3.googleusercontent.com/d/19LLZSbpZqtjJqj651MvJoRQsZmSy1Xbe" },
-  { url: "https://lh3.googleusercontent.com/d/1h47prmeKq8d9IMRhEkMN5GTtucdDkRJ7" } ],
-            2019: [
-                /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/1sSa2WAIFKA1Ona8J2c_vPmUdO2TQBYH7" },
-  { url: "https://lh3.googleusercontent.com/d/187EZWI9qURx_IhJ1ALvpzGm9_hEjsQTb" },
-  { url: "https://lh3.googleusercontent.com/d/1bsRFkFi3X6cvZXRM2Vcom6BFLLdtVKmz" },
-  { url: "https://lh3.googleusercontent.com/d/13ObZiRu8LefszEPJqCRBU_RcAPiM4p87" },
-  { url: "https://lh3.googleusercontent.com/d/1X1X5LG53kKRynzuyCyWzDEFKIGGT9k8y" },
-  { url: "https://lh3.googleusercontent.com/d/1-gmO__WWY4kGLAdeg-2JWTpg3tCyqUmX" },
-  { url: "https://lh3.googleusercontent.com/d/1u21rtyJ_OiuYDMfEHHmNXRwwIMxaUn_1" },
-  { url: "https://lh3.googleusercontent.com/d/1mr1Du68FYwQiJSPJZaZzYA3bwp5Xod99" },
-  { url: "https://lh3.googleusercontent.com/d/1u_aOCDNhNVuSjiocQb3B8I9Haxw7BWki" },
-  { url: "https://lh3.googleusercontent.com/d/1px3HgDknamd7U2YxN9pPm0WgcEI6wSR_" },
-  { url: "https://lh3.googleusercontent.com/d/11rDv9Jm1HrYuKG2klvcMw-5IKzcncRJh" },
-  { url: "https://lh3.googleusercontent.com/d/1il5iKsoim9REdVw_35T996EEOVJuRdkz" },
-  { url: "https://lh3.googleusercontent.com/d/1xrJ3gmA5lB46NP12MG7tnw-02kcHr-EU" },
-  { url: "https://lh3.googleusercontent.com/d/1zlK549-10CnmJ4va5SKJ8EcbDpdgo_8B" },
-  { url: "https://lh3.googleusercontent.com/d/1ZOCAHrG7R7q5N8F5_spQ49c6S1UxgTV6" },
-  { url: "https://lh3.googleusercontent.com/d/19Y9x3AL_IAIyZy6KlRqdJSoRltSJMi9Z" },
-  { url: "https://lh3.googleusercontent.com/d/1tRB0WH1BGR2tiL0XeXHg172WgudgAUTN" },
-  { url: "https://lh3.googleusercontent.com/d/1UNp5rlTW3-vcG1HDBQZGPYY2u-H1Y-w6" },
-  { url: "https://lh3.googleusercontent.com/d/1fiqTzE03HDQe1SUyLtHxKh4Vbdgi8Rak" },
-  { url: "https://lh3.googleusercontent.com/d/16GL3FH_E1_suggdxMJpq8iVPgXgDjigG" },
-  { url: "https://lh3.googleusercontent.com/d/1KEchh81c4QuaBz2-XxMd3MvHVcSbgS0G" },
-  { url: "https://lh3.googleusercontent.com/d/1h4uOy_5vXLIMfSwxl680Gglev9QWKugk" },
-  { url: "https://lh3.googleusercontent.com/d/1E5ZiWl_CuGlN1zDOTYZcqJPCMeJEf1Au" },
-  { url: "https://lh3.googleusercontent.com/d/1OIDMsdUGRF5r3ivFF26EAlV8huW0AuRi" },
-  { url: "https://lh3.googleusercontent.com/d/1Pe-2k0c5IXiU-7fYMvRbD8xTWQNKxTZ7" },
-  { url: "https://lh3.googleusercontent.com/d/19HRMpfHQCwYV1mdkzHblRIRT5G7WIYSH" },
-  { url: "https://lh3.googleusercontent.com/d/1WFTq0EjVU5BE41KEsozAH8dF2iL_04GV" },
-  { url: "https://lh3.googleusercontent.com/d/1UJBrBvT_WtkBITtCoJ1bVLnr-tJDX1tz" },
-  { url: "https://lh3.googleusercontent.com/d/1pUwCXvY2MaEHutLu5iR7UJKhApRwbjO_" },
-  { url: "https://lh3.googleusercontent.com/d/1B3G-1C5eUEirBqewvZnv_2rYfFbwQMBO" },
-  { url: "https://lh3.googleusercontent.com/d/1RXr77LQyKDZdP4GmF4Wjs_VhSOG9QuWw" },
-  { url: "https://lh3.googleusercontent.com/d/1BDTyI_xqbaPAeUmJIrRUmzstFy_bdWYJ" },
-  { url: "https://lh3.googleusercontent.com/d/1MIsA49i9CzWIMcrUK5EPnjQkHe37bKoP" },
-  { url: "https://lh3.googleusercontent.com/d/17ubVMFTeAURDU_ODtl7yuxoPpM2CnK1H" },
-  { url: "https://lh3.googleusercontent.com/d/1mVaPalPza9tr4Ljg-weVfpM4p6k1KpDh" },
-  { url: "https://lh3.googleusercontent.com/d/1Tyvwc7usnG2BJxgYjgoRJqEedmXZWQ-U" },
-  { url: "https://lh3.googleusercontent.com/d/1LSjgm120I03wv-B3LX96dn_Eg1vKq-Nk" },
-  { url: "https://lh3.googleusercontent.com/d/1N8w5KtikBYUbhQtL9NN9JtECrrDMBPaL" },
-  { url: "https://lh3.googleusercontent.com/d/1v4x4cUYFzPhuRww-1BfjsunCfSWtNhxW" },
-  { url: "https://lh3.googleusercontent.com/d/1n6ggTZTQE5uRPe09oC4nKBCAfhpwlO8X" },
-  { url: "https://lh3.googleusercontent.com/d/1_EyXIh6ZdSCe7Bc7q0nDYiIGoei34FWQ" },
-  { url: "https://lh3.googleusercontent.com/d/1uD1U-bsJ7AVNLMgsXu5y3wARvKhc_bSl" },
-  { url: "https://lh3.googleusercontent.com/d/1Map_zmakbIZAKKCa7K36GGUp9kIlORDY" },
-  { url: "https://lh3.googleusercontent.com/d/1wrE0zxhCASCyCT7kD0PMomrMF798V0Rz" },
-  { url: "https://lh3.googleusercontent.com/d/1dn7pSiL2Kcp7Sdf9ZaE6O_eWmM9-ywQK" },
-  { url: "https://lh3.googleusercontent.com/d/144QRqRW8_X29hLRTKiKpHYZVZjU3Nrjj" },
-  { url: "https://lh3.googleusercontent.com/d/1AkBOQ1QlTe3NOZoF_WjenOKmAZTUR2TB" },
-  { url: "https://lh3.googleusercontent.com/d/18CkNMSS_ePqevjI3HOy5pV7DnZ8sjU4c" },
-  { url: "https://lh3.googleusercontent.com/d/1Chu6TOxqOYHetcRWFo7S27B_N0zYatdd" },
-  { url: "https://lh3.googleusercontent.com/d/1VTWG9IfzoriBb6WieCwcufm0Xy5Xy8jp" },
-  { url: "https://lh3.googleusercontent.com/d/15QJ7vmeQvmY5w7Hkid6p0ofDY8w8127j" },
-  { url: "https://lh3.googleusercontent.com/d/1nJoCPxedEP9QkbY2zzZFhHCxE_PrBT-8" },
-  { url: "https://lh3.googleusercontent.com/d/1s4UF2KRQAykxDleZs37LLv6ZQ1fJZ-WZ" },
-  { url: "https://lh3.googleusercontent.com/d/1niFIfrfInKRW_XBoi6HMi9ODYzTd0ga_" },
-  { url: "https://lh3.googleusercontent.com/d/1kuFFHEUMyPQjWodMr5o7qDMN2DSiqyY7" },
-  { url: "https://lh3.googleusercontent.com/d/1PEKZaCh3LQ2sAH4bA8MVME5CFohhkm9z" },
-  { url: "https://lh3.googleusercontent.com/d/16M5yQk1-Vyn07Q3rob5zh5PpF6mGz7Bs" },
-  { url: "https://lh3.googleusercontent.com/d/1Xzn1sc3CZVjInCkMoDN_WdFroaOuVKip" },
-  { url: "https://lh3.googleusercontent.com/d/1qZfQP_eJzwZp2Ape9uQcuJ-ETDj6AE9K" },
-  { url: "https://lh3.googleusercontent.com/d/1Ej_sYdN-Ioh9TqGxk7R-cfGUOvGxUdmt" },
-  { url: "https://lh3.googleusercontent.com/d/1AAOTBGAiGVD6f1vLn9zGFJ7JzZPbA5TM" },
-  { url: "https://lh3.googleusercontent.com/d/17kiAd8aQOZEVw3ddeU8xhwoBav_7zjpj" },
-  { url: "https://lh3.googleusercontent.com/d/1Orvot4z5DL-Srt5Hzlym3bXvoDJge1Bw" },
-  { url: "https://lh3.googleusercontent.com/d/1sIDeaE00doCypz91jN2U7WdNu3yAFVlh" },
-  { url: "https://lh3.googleusercontent.com/d/15DEUYJajiPyo4D_PKvDw-GMAxb_1dLBd" },
-  { url: "https://lh3.googleusercontent.com/d/1GC9U2-gkkZS26vOkWbVtrmCkNblubRET" },
-  { url: "https://lh3.googleusercontent.com/d/1UAqS4H-rbCcV6X0YNEvYoDf-yDZMpb8b" },
-  { url: "https://lh3.googleusercontent.com/d/1-2iNg4cEKuGjyG28bAfv8A3eu8nbQ7Gg" },
-  { url: "https://lh3.googleusercontent.com/d/1zjZbFAaFnUd9IvtfReux63YaQgjLuRNw" },
-  { url: "https://lh3.googleusercontent.com/d/1HQAnsR1TV-e9RYCOWV0b5hg6016Ml1uv" },
-  { url: "https://lh3.googleusercontent.com/d/1EU2IbVzSd4d22tH5OMFrIScedr0tTl9F" },
-  { url: "https://lh3.googleusercontent.com/d/1s9lkUH7_REpGtPBQwtf-CWp-dmuUUnP9" },
-  { url: "https://lh3.googleusercontent.com/d/1aRtIdj6IBaCwz5EEQR0wVGiWXGMP97px" },
-  { url: "https://lh3.googleusercontent.com/d/1cKJAD4hgUHwI3rL1vWlvE2NmG7mXEgWO" },
-  { url: "https://lh3.googleusercontent.com/d/1jsR4ZYn5X_5mUgpoUU2bag4oKv9-W3p4" },
-  { url: "https://lh3.googleusercontent.com/d/1zU8ufO5RxQFrP4x9Wf91Y5RBlsJXyvFY" },
-  { url: "https://lh3.googleusercontent.com/d/1sj4F_ldff81fXaCkjFsKHivVdROstmlg" },
-  { url: "https://lh3.googleusercontent.com/d/1Oh8RLHHoUWI1s_xMw7zOH6PauV_u_SFC" },
-  { url: "https://lh3.googleusercontent.com/d/1BMIV1FIDvLpq6dXocuBvEHIaYs8hrt2d" },
-  { url: "https://lh3.googleusercontent.com/d/1PtmvtU41pNYoY5L0ujOMWX82gXammiB3" },
-  { url: "https://lh3.googleusercontent.com/d/1OOSpTMMrNDk7euEesOt-kXRJ9UkYdNK5" },
-  { url: "https://lh3.googleusercontent.com/d/1R5Rh9QtfqoJjRyZsQeQQzf-_BdgFCFyV" }
-            ],
-            2018: [
-                /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/19AOh9PCsyejbDdt6bHZgRksl5zQa3syT" },
-  { url: "https://lh3.googleusercontent.com/d/1dfX13zyP_CC5knZ27fdCFUcRLg6jP6p1" },
-  { url: "https://lh3.googleusercontent.com/d/1xlmlkd7wefYOoviu930-5oweWjgMo4em" },
-  { url: "https://lh3.googleusercontent.com/d/1BAT_eu8dUB97q60Z3tcS3lFAlvAXCrQM" },
-  { url: "https://lh3.googleusercontent.com/d/1Q3rtRPw6Or0ipQ-fbaLFsvTwChR9btbF" },
-  { url: "https://lh3.googleusercontent.com/d/1cSlPUafjeKbfphkVVOHPjYm-AR33gwAQ" },
-  { url: "https://lh3.googleusercontent.com/d/1s3jaIAyxnJMcdY2rT82_xx7VYWwdb282" },
-  { url: "https://lh3.googleusercontent.com/d/1d0kfieI27z_OLjXZ84USPJX-SPXEy3M9" },
-  { url: "https://lh3.googleusercontent.com/d/1N8IT4MOjz3ctY0uIMpDgJUay9zXTc6Yv" },
-  { url: "https://lh3.googleusercontent.com/d/1-WswqQOn3P2C0ecJK7U82daAXjXpsush" },
-  { url: "https://lh3.googleusercontent.com/d/1pJAQ7yt-11bHsHktkWkRStXrOIaGJVr6" },
-  { url: "https://lh3.googleusercontent.com/d/17uzi2pK5nW6IVFmQmGulNBubaSZQ64li" },
-  { url: "https://lh3.googleusercontent.com/d/16ilfdFdxLHkL0AdHvAhVYVYIVS-kf4Xa" },
-  { url: "https://lh3.googleusercontent.com/d/1AWuswGynm8_yHnq7nNF36Uk5ZQYagAqI" },
-  { url: "https://lh3.googleusercontent.com/d/1TMpGwbttYFQFDT_ntQGnB1y-Bo9UuKx2" },
-  { url: "https://lh3.googleusercontent.com/d/1T2O1Rmysyle7HzSI7pKlZRks-cd939Wi" },
-  { url: "https://lh3.googleusercontent.com/d/1sIsNttypG3FQzds4X4wIEEFoZ2aiSSym" },
-  { url: "https://lh3.googleusercontent.com/d/19_BN902mqyNqDtJPMaLLNLckG3k50A4s" },
-  { url: "https://lh3.googleusercontent.com/d/1A0HtptyPBHLF-Iaoul2rvAIUUYV14zO3" },
-  { url: "https://lh3.googleusercontent.com/d/1yrjKV00BtW7SCl5jFTDFavYI3hfbn19V" },
-  { url: "https://lh3.googleusercontent.com/d/1SUotXORfv6SlYWsSv1zoA6Vg65jPoe8K" },
-  { url: "https://lh3.googleusercontent.com/d/1_yUrKX_DKyCIsUGzNjlghU1Xr9WGTwUj" },
-  { url: "https://lh3.googleusercontent.com/d/1ksaDPyzEUnNOvmtWjvpIyh4PM-TFRkOs" },
-  { url: "https://lh3.googleusercontent.com/d/1MZeYX7myWSFp0c070_hlR5q3te8CFM9C" },
-  { url: "https://lh3.googleusercontent.com/d/1SkhBMH13VQYSxGlfKVG-PdNGBcUi92k1" },
-  { url: "https://lh3.googleusercontent.com/d/1pmbhKzszNfLI-bSwWgKZwpHI_lEzt6FI" },
-  { url: "https://lh3.googleusercontent.com/d/1qf56o3NxtJjifrFWfyKs_u3st9_YXGS5" },
-  { url: "https://lh3.googleusercontent.com/d/1qDS1rObCoLzHzWeWKoxAvmPVNQUarEJN" },
-  { url: "https://lh3.googleusercontent.com/d/13_RBwM7cJJnbOAbwaIVY1RXrHMgSA8St" },
-  { url: "https://lh3.googleusercontent.com/d/18DkjlHTCxfneKj37XKnoZlF7ZrAwsWuQ" },
-  { url: "https://lh3.googleusercontent.com/d/1L75ENdSAo1LheRhLp_5UVJFFZT7rp8-6" },
-  { url: "https://lh3.googleusercontent.com/d/1X87cXi7toA6cOo7sJ4hewofzZYfiRNqY" },
-  { url: "https://lh3.googleusercontent.com/d/1D2V4-mOlVVgFzyMBVjs34I4hyKM4Hu4D" },
-  { url: "https://lh3.googleusercontent.com/d/1jQ7CJDM5DEaSTLdOgamwMKK7auf5WJKQ" },
-  { url: "https://lh3.googleusercontent.com/d/1oBN_Hr3HiD-s2880MysYuW2bnCZRyCB6" },
-  { url: "https://lh3.googleusercontent.com/d/1ar8acDju_VSBwBMTKYbUoa3q1Tl5Znxs" },
-  { url: "https://lh3.googleusercontent.com/d/1ngsZ_KbLbYtWyfX07DLFSIK64YDVoS_o" },
-  { url: "https://lh3.googleusercontent.com/d/193mqvt_z4IHw7LOYNBA2N64-QD4Rxjy1" },
-  { url: "https://lh3.googleusercontent.com/d/11u6l0BTZ4E707n7Uob7nIbFMhZxjffJx" },
-  { url: "https://lh3.googleusercontent.com/d/1yT_MBSsVyoK1sgs2vQCNqHdQB3feaWey" },
-  { url: "https://lh3.googleusercontent.com/d/17sLG5jxN2btsTk9pkGML70HoaeREpC-O" },
-  { url: "https://lh3.googleusercontent.com/d/1U5P40CN9QtHRFaTLQ43vRfRk0VTgyRj3" }
-            ],
-            2017: [
-                /* 歷年採柚紀錄照片列表 */
-  { url: "https://lh3.googleusercontent.com/d/1s9CKTNgyv4HuetFiQRc7yECPNzsT9cYB", title: "2017 採柚紀錄照片 1" },
-  { url: "https://lh3.googleusercontent.com/d/1iPnRV7GLXEiZrZmlqG5PnsxDr9NtcUVD", title: "2017 採柚紀錄照片 2" },
-  { url: "https://lh3.googleusercontent.com/d/19iV1ejb-jX40wOl_VqnQpGsBQKIxIjav", title: "2017 採柚紀錄照片 3" },
-  { url: "https://lh3.googleusercontent.com/d/1Q_GybNCf1Ea0U8FOcaW_RkVUhBZ2gz32", title: "2017 採柚紀錄照片 4" },
-  { url: "https://lh3.googleusercontent.com/d/1IXH2iwbPL23v6Q1Sn7qg7Sa7YelqJYyR", title: "2017 採柚紀錄照片 5" },
-  { url: "https://lh3.googleusercontent.com/d/15NmzpdFR6OT5mxTceh5zY1nXFGiRsPQO", title: "2017 採柚紀錄照片 6" },
-  { url: "https://lh3.googleusercontent.com/d/1ze9PviD0PE5VPxGcBH7EnE51uObT3Caw", title: "2017 採柚紀錄照片 7" },
-  { url: "https://lh3.googleusercontent.com/d/1sVbIUR6bvBnv80lj6rAeLDpnTeHd22me", title: "2017 採柚紀錄照片 8" },
-  { url: "https://lh3.googleusercontent.com/d/1Crbiph_kJW037jKPc_-QUxaFLO9Vl4sC", title: "2017 採柚紀錄照片 9" },
-  { url: "https://lh3.googleusercontent.com/d/1QkXhxGeJNph6St159YxDtkQbF9X20T1A", title: "2017 採柚紀錄照片 10" },
-  { url: "https://lh3.googleusercontent.com/d/1e1kIPuiW6LakM_qYhhKe3kDXrUzY_juk", title: "2017 採柚紀錄照片 11" },
-  { url: "https://lh3.googleusercontent.com/d/1eXt7c1-p613PyF9UDImPdQ-CcWPlqDUC", title: "2017 採柚紀錄照片 12" },
-  { url: "https://lh3.googleusercontent.com/d/1vAb6DxFZbguY24iQaU884KvoVjNP9jdt", title: "2017 採柚紀錄照片 13" },
-  { url: "https://lh3.googleusercontent.com/d/1DaO408mmBX2fkT2PctRdExpbZYQ-3Bip", title: "2017 採柚紀錄照片 14" },
-  { url: "https://lh3.googleusercontent.com/d/1ytg4r2RHC-8nY_LYOg8L63SFRy-0Z5h4", title: "2017 採柚紀錄照片 15" },
-  { url: "https://lh3.googleusercontent.com/d/15Eobsi4TzXMaM6GEZfRXmUvJMjyJe-C3", title: "2017 採柚紀錄照片 16" },
-  { url: "https://lh3.googleusercontent.com/d/1w8skPXTAaKGddz3P36fS2G03Hok0N3x5", title: "2017 採柚紀錄照片 17" },
-  { url: "https://lh3.googleusercontent.com/d/1sD5wEL-OuI_2fyl-QQkWSOx4iX1rCgb_", title: "2017 採柚紀錄照片 18" },
-  { url: "https://lh3.googleusercontent.com/d/1kzwR9jvxNTcH3HqeMr9err26UEc5uFpl", title: "2017 採柚紀錄照片 19" },
-  { url: "https://lh3.googleusercontent.com/d/1XzBI1ti-czZJcr-ZAUbedywmGjsA2wKW", title: "2017 採柚紀錄照片 20" },
-  { url: "https://lh3.googleusercontent.com/d/1Wg-8FCkUr3NY0rduLEFZtgog2SMSUbD9", title: "2017 採柚紀錄照片 21" },
-  { url: "https://lh3.googleusercontent.com/d/1WVf_U5b152Bntx9-qUY3gJcXAkbKm5rj", title: "2017 採柚紀錄照片 22" },
-  { url: "https://lh3.googleusercontent.com/d/1WwNrxFCRD7jtCTvgExdtilejc_EN5WQW", title: "2017 採柚紀錄照片 23" },
-  { url: "https://lh3.googleusercontent.com/d/1P7bGEx_VPk9TKWmpQxW9kG99F1hMB49C", title: "2017 採柚紀錄照片 24" },
-  { url: "https://lh3.googleusercontent.com/d/16lP42Nz9OixltGjk1SgjAO5_SzR-RDyr", title: "2017 採柚紀錄照片 25" },
-  { url: "https://lh3.googleusercontent.com/d/1HF7jcZFwVPrJ7jdYrEgeWBxbhr9ZO4GA", title: "2017 採柚紀錄照片 26" },
-  { url: "https://lh3.googleusercontent.com/d/1hyJxQ9cWC-wWK6MNAKnGZCPa3aKZSp4l", title: "2017 採柚紀錄照片 27" },
-  { url: "https://lh3.googleusercontent.com/d/1rNeWSTwgcCfoyG2PlyqOczIX-dUMxruT", title: "2017 採柚紀錄照片 28" },
-  { url: "https://lh3.googleusercontent.com/d/1-s29Xt9nF49JBui5bEMCLcyQMmj9VXlD", title: "2017 採柚紀錄照片 29" },
-  { url: "https://lh3.googleusercontent.com/d/1-vDrNbtg4fUTBUwUvyO2RwnbdyYU4zJo", title: "2017 採柚紀錄照片 30" },
-  { url: "https://lh3.googleusercontent.com/d/1Xz6ihEMD_Dd6iAd2XR0PHUma_9XgtBur", title: "2017 採柚紀錄照片 31" },
-  { url: "https://lh3.googleusercontent.com/d/1B21Xi6iw96FoOGZkejA-dt_dYQ3ltdkq", title: "2017 採柚紀錄照片 32" },
-  { url: "https://lh3.googleusercontent.com/d/1cDOJlG5TR7B0xk-tacFQB69IwnEbGv9X", title: "2017 採柚紀錄照片 33" },
-  { url: "https://lh3.googleusercontent.com/d/1OvVROYrlm_qiIxORMw2kcY00ZjljjJdK", title: "2017 採柚紀錄照片 34" },
-  { url: "https://lh3.googleusercontent.com/d/1t65C7ykXaxrV5HRqLzniW5u2bnFhdJEG", title: "2017 採柚紀錄照片 35" },
-  { url: "https://lh3.googleusercontent.com/d/1MJCixUrIPfbcltOSMvg2svzbqXxeS8zU", title: "2017 採柚紀錄照片 36" },
-  { url: "https://lh3.googleusercontent.com/d/1GIS8qScb66Ukr2EnhKl82fjG1ZMhFRV2", title: "2017 採柚紀錄照片 37" },
-  { url: "https://lh3.googleusercontent.com/d/1TAuRb11dDxlciTKevV-AVw6RTgJof1Nm", title: "2017 採柚紀錄照片 38" },
-  { url: "https://lh3.googleusercontent.com/d/1ISzExk99_Jn4u6rWqhi1_CSDUbnssgC2", title: "2017 採柚紀錄照片 39" },
-  { url: "https://lh3.googleusercontent.com/d/19x_cecWKyfPY_spakKR9aT0KlKSydc6v", title: "2017 採柚紀錄照片 40" },
-  { url: "https://lh3.googleusercontent.com/d/1ElEy6SB4AhBlPGGi1thjwgHCHSaRwhj_", title: "2017 採柚紀錄照片 41" },
-  { url: "https://lh3.googleusercontent.com/d/1F8RYALeqr-467yJKwYxM44OWMh6wu2fl", title: "2017 採柚紀錄照片 42" },
-  { url: "https://lh3.googleusercontent.com/d/1sIWRHA5-9gMCqDhbgjxx3ssGyLBuCsPu", title: "2017 採柚紀錄照片 43" },
-  { url: "https://lh3.googleusercontent.com/d/1-ChBZ6q2aRVkBrNAa3rC_5TQKmB_H4o-", title: "2017 採柚紀錄照片 44" },
-  { url: "https://lh3.googleusercontent.com/d/1EzF7rV_q_0VM2GoAhosMabfH4MczYhjn", title: "2017 採柚紀錄照片 45" },
-  { url: "https://lh3.googleusercontent.com/d/1lSLgrkiSyHrARtfz_tk0PTXIJsYkJvvg", title: "2017 採柚紀錄照片 46" },
-  { url: "https://lh3.googleusercontent.com/d/16VHWp7VmDa-ZaPigPuQrvpfPMusL0_Uj", title: "2017 採柚紀錄照片 47" },
-  { url: "https://lh3.googleusercontent.com/d/1Ok90cdnPMcvALNnMsdIhW7Hu5gsEJtxr", title: "2017 採柚紀錄照片 48" },
-  { url: "https://lh3.googleusercontent.com/d/1LxpdBfE1hnMVcQwJbzsswt6wQ_gvVb7k", title: "2017 採柚紀錄照片 49" },
-  { url: "https://lh3.googleusercontent.com/d/1T7El6wqlqMkAUhTI5-GGp60SMaPDuidu", title: "2017 採柚紀錄照片 50" },
-  { url: "https://lh3.googleusercontent.com/d/1RF4zqrIfODwnNbwveQelYWQnoETy1uB6", title: "2017 採柚紀錄照片 51" },
-  { url: "https://lh3.googleusercontent.com/d/1sezDczuUduDHWFFzw6u-nuIAelClpjdP", title: "2017 採柚紀錄照片 52" },
-  { url: "https://lh3.googleusercontent.com/d/1Yc-asqHaP94xk6N5XQzSTj4J_o7Sm3ju", title: "2017 採柚紀錄照片 53" },
-  { url: "https://lh3.googleusercontent.com/d/1Al1mJ59Wtg-t3eBemnpycA71XGsbZ5ok", title: "2017 採柚紀錄照片 54" },
-  { url: "https://lh3.googleusercontent.com/d/1piB52yzxU1R4IcRNz2RwrY7NWSxVx2G_", title: "2017 採柚紀錄照片 55" },
-  { url: "https://lh3.googleusercontent.com/d/13mHKKicbSNDzvHeSN25r8R3y-JS4X3YS", title: "2017 採柚紀錄照片 56" },
-  { url: "https://lh3.googleusercontent.com/d/1aXQCO7OLM_nyWBoSJhqBwDtFYQe9gaFg", title: "2017 採柚紀錄照片 57" },
-  { url: "https://lh3.googleusercontent.com/d/1UlhYnJZAarZRs-aMM8brTQbSzA9JyqI5", title: "2017 採柚紀錄照片 58" },
-  { url: "https://lh3.googleusercontent.com/d/1os98kBTapM7e5nClmeTyMuf58WK-dJok", title: "2017 採柚紀錄照片 59" },
-  { url: "https://lh3.googleusercontent.com/d/1ekN4iViJg_wFjd7YSRq9u_hSx9qiRqK6", title: "2017 採柚紀錄照片 60" },
-  { url: "https://lh3.googleusercontent.com/d/1CO6uYh3R4PASc23z2dZ_-qV830FSmpyJ", title: "2017 採柚紀錄照片 61" }
-            ],
-            2016: [
-                { url: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1000&q=80", title: "2016 慈心護柚善願" }
-            ],
-            2015: [
-                { url: "https://lh3.googleusercontent.com/d/13avDhDV5WgR3uDMk66D8RMPFshAFdRpY", title: "2015 採柚紀錄照片 1" },
-                { url: "https://lh3.googleusercontent.com/d/1C-__bk6eGyeAL_gq1237hY69lP3WI7mp", title: "2015 採柚紀錄照片 2" },
-                { url: "https://lh3.googleusercontent.com/d/1FsxIrITtQa5wJCrOcmmhLCwtfNSSncME", title: "2015 採柚紀錄照片 3" },
-                { url: "https://lh3.googleusercontent.com/d/1u7qbRv-mq3_L6BCHU3WCfK3CG2w0npns", title: "2015 採柚紀錄照片 4" },
-                { url: "https://lh3.googleusercontent.com/d/1Vee6fnD5fsPXyE0vN0qsWOpReIoF4DtP", title: "2015 採柚紀錄照片 5" },
-                { url: "https://lh3.googleusercontent.com/d/10wbbTboVluKHQBGND73tqfjj3I6N733n", title: "2015 採柚紀錄照片 6" },
-                { url: "https://lh3.googleusercontent.com/d/164IW8B5JhOKrIm3XEycQOBZ6wy5aN-qg", title: "2015 採柚紀錄照片 7" },
-                { url: "https://lh3.googleusercontent.com/d/1HIRv8RBLh2zZeKmInwJprdNoPt_IDqUx", title: "2015 採柚紀錄照片 8" },
-                { url: "https://lh3.googleusercontent.com/d/1Inbv2eEm49BEAorU9CpOBemnn6izZNS3", title: "2015 採柚紀錄照片 9" },
-                { url: "https://lh3.googleusercontent.com/d/1-saKrXWQUR7Zqd8I0YTGHw9oOzsffUBo", title: "2015 採柚紀錄照片 10" },
-                { url: "https://lh3.googleusercontent.com/d/13KM1-SDuat8SeB2ItDr1aE9bnjKpD8fw", title: "2015 採柚紀錄照片 11" },
-                { url: "https://lh3.googleusercontent.com/d/1qHreO3fz76qEze9W_ranNJ39tozyKhbO", title: "2015 採柚紀錄照片 12" },
-                { url: "https://lh3.googleusercontent.com/d/1ArUlp0_ZH-3r-q-J0owOkVieKFcTj2RF", title: "2015 採柚紀錄照片 13" },
-                { url: "https://lh3.googleusercontent.com/d/1LULZHiKw8RS9gbUsYXqvJZG0m9GXYrkN", title: "2015 採柚紀錄照片 14" },
-                { url: "https://lh3.googleusercontent.com/d/1KpsN7rL0ULzEOM3IdL4FZNN9hUfP_n7x", title: "2015 採柚紀錄照片 15" }
-            ],
-            2014: [
-                { url: "https://lh3.googleusercontent.com/d/1TKes2WM5U8DTPmoLC4KL-KqsxxWceect", title: "2014 採柚紀錄照片 1" },
-                { url: "https://lh3.googleusercontent.com/d/199QFED9fvKa-tntk5i0xmt8uUIhveUYZ", title: "2014 採柚紀錄照片 2" },
-                { url: "https://lh3.googleusercontent.com/d/1YPtA7Q5hDBqTkYydw3om-OCL4IfvcGFE", title: "2014 採柚紀錄照片 3" },
-                { url: "https://lh3.googleusercontent.com/d/1g5EwRFbEkPum19ywnJyh5UVcxhUfTSEF", title: "2014 採柚紀錄照片 4" },
-                { url: "https://lh3.googleusercontent.com/d/15OQJgxGuHsEEoKq9LW4MbUnFcTn_QTr_", title: "2014 採柚紀錄照片 5" },
-                { url: "https://lh3.googleusercontent.com/d/1ABqZYcIHNMVK9LQo3igduFYP7sUmljL8", title: "2014 採柚紀錄照片 6" },
-                { url: "https://lh3.googleusercontent.com/d/1-AlalZk50SEgL-c-qm2KzG5jXmLK8GRm", title: "2014 採柚紀錄照片 7" },
-                { url: "https://lh3.googleusercontent.com/d/1nR8oWE6UfCvwFFtRJcRQJ06JU4hQ-C2o", title: "2014 採柚紀錄照片 8" },
-                { url: "https://lh3.googleusercontent.com/d/1cClqnO3aMWC4X6O6TcHwKnoGPXqpW0yQ", title: "2014 採柚紀錄照片 9" },
-                { url: "https://lh3.googleusercontent.com/d/1pWY3fiJUzKx9vQjnyLYKyEzBkHysrdvb", title: "2014 採柚紀錄照片 10" },
-                { url: "https://lh3.googleusercontent.com/d/1xc3_aQfb6S90NItTIyRrncf-AoxGGsVm", title: "2014 採柚紀錄照片 11" },
-                { url: "https://lh3.googleusercontent.com/d/1rjPdy3-me1AOHpF96wYox0GYt9mPctAA", title: "2014 採柚紀錄照片 12" },
-                { url: "https://lh3.googleusercontent.com/d/1R_NBl9iuTKGsrInWamPJ_o9JwCYhHlrG", title: "2014 採柚紀錄照片 13" },
-                { url: "https://lh3.googleusercontent.com/d/1BdKKbxeTDiiM9OTB-sTd3HlN00CLhoG-", title: "2014 採柚紀錄照片 14" }
-            ]
-        };
+    function update(currentTime) {
+        const elapsed = currentTime - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = 1 - (1 - progress) * (1 - progress); // 減速效果 (easeOutQuad)
+        const currentValue = Math.floor(easeProgress * targetValue);
 
-        function formatImageUrl(url) {
-            if (!url) return '';
-            // 自動將 Google Drive / Docs 連結轉換為可以直接在 HTML 渲染顯示的圖片連結
-            if (url.includes('drive.google.com') || url.includes('docs.google.com') || url.includes('googleusercontent.com')) {
-                let fileId = '';
-                const matchD = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-                const matchId = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-                if (matchD && matchD[1]) {
-                    fileId = matchD[1];
-                } else if (matchId && matchId[1]) {
-                    fileId = matchId[1];
-                }
-                if (fileId) {
-                    return `https://lh3.googleusercontent.com/d/${fileId}`;
-                }
-            }
-            return url;
+        const displayValue = isFormatted ? currentValue.toLocaleString() : currentValue;
+        element.textContent = `${displayValue}${suffix}`;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            const finalDisplay = isFormatted ? targetValue.toLocaleString() : targetValue;
+            element.textContent = `${finalDisplay}${suffix}`;
         }
+    }
+    requestAnimationFrame(update);
+}
 
-        let currentActiveYear = 2025;
+// 首頁 80+ / 20+ / 100% 捲動到位時觸發跑數
+function initStatCounters() {
+    const statElements = document.querySelectorAll('.stat-number');
+    if (!statElements.length) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+                const suffix = el.getAttribute('data-suffix') || '';
+
+                animateCountUp(el, target, 1800, suffix, false);
+                obs.unobserve(el);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    statElements.forEach(el => observer.observe(el));
+}
+
+// 數據回顧頁面卡片數字快取與跑數觸發
+let cachedTotalWeight = 58797;
+let cachedTotalParticipants = 1330;
+let cachedTotalYears = 20;
+
+function triggerDataMilestoneAnimations() {
+    const elWeight = document.getElementById('milestone-weight');
+    const elParticipants = document.getElementById('milestone-participants');
+    const elYears = document.getElementById('milestone-years');
+
+    if (elWeight) animateCountUp(elWeight, cachedTotalWeight, 1800, '', true);
+    if (elParticipants) animateCountUp(elParticipants, cachedTotalParticipants, 1800, '', true);
+    if (elYears) animateCountUp(elYears, cachedTotalYears, 1500, '', false);
+}
+
+// ===== 3. 頁面導覽與視圖切換 =====
+let currentActiveYear = 2025;
 
 function navigateTo(viewId) {
     const baseViews = ['home', 'data', 'photos', 'reports', 'videos'];
     
-    // 💡 切換到精選影片頁面時，強制執行影片卡片渲染
     if (viewId === 'videos') {
         renderVideos();
     }
 
-    // 1. 隱藏所有視圖
+    // 切換到「數據回顧」時觸發數字跑數
+    if (viewId === 'data') {
+        setTimeout(() => {
+            triggerDataMilestoneAnimations();
+        }, 150);
+    }
+
     baseViews.forEach(id => {
         const el = document.getElementById(id + '-view');
         if (el) {
@@ -1346,7 +830,6 @@ function navigateTo(viewId) {
         }
     });
 
-    // 2. 顯示目標視圖
     const target = document.getElementById(viewId + '-view');
     if (target) {
         target.classList.remove('hidden');
@@ -1356,7 +839,6 @@ function navigateTo(viewId) {
         }, 50);
     }
 
-    // 3. 切換導覽按鈕選取狀態
     baseViews.forEach(nav => {
         const desktopBtn = document.getElementById(`nav-btn-${nav}`);
         const desktopIcon = document.getElementById(`nav-icon-${nav}`);
@@ -1399,149 +881,255 @@ function navigateTo(viewId) {
     }
 }
 
-        function viewYearlyPhotos(year) {
-            currentActiveYear = year;
-            renderYearTabs();
-            renderPhotosForYear(year);
-            navigateTo('photos');
-        }
+// ===== 4. 影像回顧：分批延遲載入 (Lazy Batch Loading) =====
+const PHOTO_BATCH_SIZE = 12; // 每批載入 12 張
+let currentLoadedCount = 0;
+let photoObserver = null;
+
+function viewYearlyPhotos(year) {
+    currentActiveYear = year;
+    renderYearTabs();
+    renderPhotosForYear(year);
+    navigateTo('photos');
+}
 
 function renderYearTabs() {
-            const container = document.getElementById('year-tabs-container');
-            if (!container) return;
+    const container = document.getElementById('year-tabs-container');
+    if (!container) return;
 
-            const years = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014];
-            container.innerHTML = years.map(y => {
-                const isActive = y === currentActiveYear;
-                return `
-                    <button onclick="switchYearTab(${y})" 
-                            class="w-full px-1 py-2.5 rounded-xl font-bold text-sm text-center transition-all duration-300 ${
-                                isActive 
-                                ? 'bg-pomelo-peel text-white shadow-md' 
-                                : 'bg-white text-pomelo-leaf border border-pomelo-peel/20 hover:bg-pomelo-peel/10'
-                            }">
-                        ${y}
-                    </button>
-                `;
-            }).join('');
-        }
+    const years = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014];
+    container.innerHTML = years.map(y => {
+        const isActive = y === currentActiveYear;
+        return `
+            <button onclick="switchYearTab(${y})" 
+                    class="w-full px-1 py-2.5 rounded-xl font-bold text-sm text-center transition-all duration-300 ${
+                        isActive 
+                        ? 'bg-pomelo-peel text-white shadow-md' 
+                        : 'bg-white text-pomelo-leaf border border-pomelo-peel/20 hover:bg-pomelo-peel/10'
+                    }">
+                ${y}
+            </button>
+        `;
+    }).join('');
+}
 
-        function switchYearTab(year) {
-            currentActiveYear = year;
-            renderYearTabs();
-            renderPhotosForYear(year);
-        }
+function switchYearTab(year) {
+    currentActiveYear = year;
+    renderYearTabs();
+    renderPhotosForYear(year);
+}
 
 function renderPhotosForYear(year) {
-            const badge = document.getElementById('selected-year-badge');
-            const grid = document.getElementById('photo-grid');
+    const badge = document.getElementById('selected-year-badge');
+    const grid = document.getElementById('photo-grid');
 
-            // 1. 將小字固定呈現 "歷年影像回顧"
-            if (badge) badge.innerText = '歷年影像回顧';
-            
-            const list = photosData[year] || [];
-            
-            if (grid) {
-                // 2. 針對 2026 顯示專屬預告文字
-                if (year === 2026) {
-                    grid.innerHTML = `
-                        <div class="col-span-full py-20 flex flex-col items-center justify-center space-y-4">
-                            <i class="fa-solid fa-camera-retro text-5xl text-pomelo-peel/50"></i>
-                            <p class="text-pomelo-dark/80 text-xl font-medium tracking-wide">活動照片將於 9/13 採柚活動後更新</p>
-                        </div>
-                    `;
-                    return; // 停在這裡，不要執行後面的判斷
-                }
+    if (badge) badge.innerText = '歷年影像回顧';
+    if (!grid) return;
 
-                // 3. 【新增】針對 2016 顯示「照片收集中」文字
-                if (year === 2016) {
-                    grid.innerHTML = `
-                        <div class="col-span-full py-20 flex flex-col items-center justify-center space-y-3">
-                            <i class="fa-solid fa-box-open text-5xl text-pomelo-peel/40 mb-2"></i>
-                            <p class="text-pomelo-dark/70 text-xl font-medium tracking-wide">照片收集中</p>
-                        </div>
-                    `;
-                    return; // 停在這裡，這樣就不會去讀取原本放的預設照片了
-                }
+    if (photoObserver) {
+        photoObserver.disconnect();
+        photoObserver = null;
+    }
 
-                // --- 下面保留原本的無照片/有照片處理邏輯 ---
-                if (list.length === 0) {
-                    grid.innerHTML = `
-                        <div class="col-span-full py-16 text-center text-pomelo-gray">
-                            <i class="fa-solid fa-camera-retro text-4xl text-pomelo-peel/40 mb-3"></i>
-                            <p>該年度暫無照片紀錄資料</p>
-                        </div>
-                    `;
-                } else {
-                    grid.innerHTML = list.map((item, idx) => {
-                        const directImgUrl = formatImageUrl(item.url);
-                        const photoTitle = item.title || `${year} 採柚紀錄照片 ${idx + 1}`;
+    const list = photosData[year] || [];
 
-return `
-                            <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group bg-pomelo-cream/30">
-                                <img src="${directImgUrl}" alt="${photoTitle}" loading="lazy" 
-                                     class="absolute inset-0 object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                                     onclick="openLightbox(${idx}, ${year})"
-                                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/e8f3e8/4a6b4d?text=Photo+Not+Found';">
-                            </div>
-                        `;
-                    }).join('');
-                }
-            }
+    if (year === 2026) {
+        grid.innerHTML = `
+            <div class="col-span-full py-20 flex flex-col items-center justify-center space-y-4">
+                <i class="fa-solid fa-camera-retro text-5xl text-pomelo-peel/50"></i>
+                <p class="text-pomelo-dark/80 text-xl font-medium tracking-wide">活動照片將於 9/13 採柚活動後更新</p>
+            </div>
+        `;
+        return;
+    }
+
+    if (year === 2016) {
+        grid.innerHTML = `
+            <div class="col-span-full py-20 flex flex-col items-center justify-center space-y-3">
+                <i class="fa-solid fa-box-open text-5xl text-pomelo-peel/40 mb-2"></i>
+                <p class="text-pomelo-dark/70 text-xl font-medium tracking-wide">照片收集中</p>
+            </div>
+        `;
+        return;
+    }
+
+    if (list.length === 0) {
+        grid.innerHTML = `
+            <div class="col-span-full py-16 text-center text-pomelo-gray">
+                <i class="fa-solid fa-camera-retro text-4xl text-pomelo-peel/40 mb-3"></i>
+                <p>該年度暫無照片紀錄資料</p>
+            </div>
+        `;
+        return;
+    }
+
+    currentLoadedCount = 0;
+    grid.innerHTML = '';
+    appendNextPhotoBatch(year);
+}
+
+function appendNextPhotoBatch(year) {
+    const grid = document.getElementById('photo-grid');
+    const list = photosData[year] || [];
+    if (!grid || currentLoadedCount >= list.length) return;
+
+    const oldSentinel = document.getElementById('photo-sentinel');
+    if (oldSentinel) oldSentinel.remove();
+
+    const batch = list.slice(currentLoadedCount, currentLoadedCount + PHOTO_BATCH_SIZE);
+
+    const html = batch.map((item, index) => {
+        const globalIdx = currentLoadedCount + index;
+        const directImgUrl = formatImageUrl(item.url);
+        const photoTitle = item.title || `${year} 採柚紀錄照片 ${globalIdx + 1}`;
+
+        return `
+            <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group bg-pomelo-cream/30">
+                <img src="${directImgUrl}" alt="${photoTitle}" loading="lazy" 
+                     class="absolute inset-0 object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     onclick="openLightbox(${globalIdx}, ${year})"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/e8f3e8/4a6b4d?text=Photo+Not+Found';">
+            </div>
+        `;
+    }).join('');
+
+    grid.insertAdjacentHTML('beforeend', html);
+    currentLoadedCount += batch.length;
+
+    if (currentLoadedCount < list.length) {
+        const sentinel = document.createElement('div');
+        sentinel.id = 'photo-sentinel';
+        sentinel.className = 'col-span-full py-8 flex justify-center items-center text-pomelo-peel/70 text-sm font-medium';
+        sentinel.innerHTML = `
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-circle-notch animate-spin text-lg"></i>
+                <span>照片載入中... (${currentLoadedCount} / ${list.length})</span>
+            </div>
+        `;
+        grid.appendChild(sentinel);
+
+        if (!photoObserver) {
+            photoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        appendNextPhotoBatch(currentActiveYear);
+                    }
+                });
+            }, { rootMargin: '200px' });
         }
+        photoObserver.observe(sentinel);
+    }
+}
 
-        function openPhotoModal(url, caption) {
-            const modal = document.getElementById('photo-modal');
-            const img = document.getElementById('modal-img');
-            const cap = document.getElementById('modal-caption');
+// ===== 5. Lightbox 與 Modal 彈窗機制 =====
+function openPhotoModal(url, caption) {
+    const modal = document.getElementById('photo-modal');
+    const img = document.getElementById('modal-img');
+    const cap = document.getElementById('modal-caption');
 
-            if (modal && img && cap) {
-                img.src = url;
-                cap.innerText = caption;
-                modal.classList.remove('hidden');
-                setTimeout(() => {
-                    modal.classList.remove('opacity-0');
-                    modal.classList.add('opacity-100');
-                }, 10);
-            }
-        }
+    if (modal && img && cap) {
+        img.src = url;
+        cap.innerText = caption;
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.classList.add('opacity-100');
+        }, 10);
+    }
+}
 
-        function closePhotoModal() {
-            const modal = document.getElementById('photo-modal');
-            if (modal) {
-                modal.classList.remove('opacity-100');
-                modal.classList.add('opacity-0');
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                }, 300);
-            }
-        }
+function closePhotoModal() {
+    const modal = document.getElementById('photo-modal');
+    if (modal) {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+}
 
+let currentLightboxIndex = 0;
+let currentLightboxYear = null;
 
-// 解析 CSV 格式的輔助函式（避免數字內有逗號造成解析錯誤，例如 4,652）
-        function parseCSVRow(str) {
-            let arr = [];
-            let quote = false;
-            let value = '';
-            for (let i = 0; i < str.length; i++) {
-                let char = str[i];
-                if (char === '"' && str[i+1] === '"') {
-                    value += '"';
-                    i++;
-                } else if (char === '"') {
-                    quote = !quote;
-                } else if (char === ',' && !quote) {
-                    arr.push(value.trim());
-                    value = '';
-                } else {
-                    value += char;
-                }
-            }
+function openLightbox(index, year) {
+    currentLightboxIndex = index;
+    currentLightboxYear = year;
+    updateLightboxImage();
+    
+    const lb = document.getElementById('lightbox');
+    if (lb) {
+        lb.classList.remove('hidden');
+        setTimeout(() => lb.classList.replace('opacity-0', 'opacity-100'), 10);
+    }
+}
+
+function updateLightboxImage() {
+    const list = photosData[currentLightboxYear];
+    if (!list || list.length === 0) return;
+    
+    const item = list[currentLightboxIndex];
+    const imgUrl = formatImageUrl(item.url);
+    const title = item.title || `${currentLightboxYear} 採柚紀錄照片 ${currentLightboxIndex + 1}`;
+    
+    const imgEl = document.getElementById('lightbox-img');
+    const titleEl = document.getElementById('lightbox-title');
+    
+    if (imgEl) {
+        imgEl.style.opacity = '0.5';
+        imgEl.src = imgUrl;
+        imgEl.onload = () => { imgEl.style.opacity = '1'; };
+    }
+    if (titleEl) titleEl.innerText = title;
+}
+
+function prevPhoto(e) {
+    if (e) e.stopPropagation();
+    const list = photosData[currentLightboxYear];
+    if (!list) return;
+    currentLightboxIndex = (currentLightboxIndex - 1 + list.length) % list.length;
+    updateLightboxImage();
+}
+
+function nextPhoto(e) {
+    if (e) e.stopPropagation();
+    const list = photosData[currentLightboxYear];
+    if (!list) return;
+    currentLightboxIndex = (currentLightboxIndex + 1) % list.length;
+    updateLightboxImage();
+}
+
+function closeLightbox() {
+    const lb = document.getElementById('lightbox');
+    if (lb) {
+        lb.classList.replace('opacity-100', 'opacity-0');
+        setTimeout(() => lb.classList.add('hidden'), 300);
+    }
+}
+
+// ===== 6. Google 試算表 CSV 解析與抓取 =====
+function parseCSVRow(str) {
+    let arr = [];
+    let quote = false;
+    let value = '';
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (char === '"' && str[i+1] === '"') {
+            value += '"';
+            i++;
+        } else if (char === '"') {
+            quote = !quote;
+        } else if (char === ',' && !quote) {
             arr.push(value.trim());
-            return arr;
+            value = '';
+        } else {
+            value += char;
         }
+    }
+    arr.push(value.trim());
+    return arr;
+}
 
-// 自動抓取試算表資料
 async function fetchSheetData() {
     const sheetUrl = 'https://docs.google.com/spreadsheets/d/14cbuuIrfCvn9khcS5icFyjzIgR9BnJrM/export?format=csv&gid=755038545';
     
@@ -1551,7 +1139,6 @@ async function fetchSheetData() {
         const csvText = await response.text();
         
         const rows = csvText.split(/\r?\n/).map(row => parseCSVRow(row));
-
         const yearsRow = rows[1];
         const weightsRow = rows[2];
         const participantsRow = rows[4];
@@ -1562,13 +1149,11 @@ async function fetchSheetData() {
         
         for (let i = 1; i < yearsRow.length; i++) {
             const year = yearsRow[i] ? yearsRow[i].trim() : '';
-            
             if (year && /^\d{4}$/.test(year)) {
                 const weightStr = weightsRow[i] ? weightsRow[i].replace(/,/g, '') : '';
                 const participantStr = participantsRow[i] ? participantsRow[i].replace(/,/g, '') : '';
 
                 tableData.push({ year, weight: weightStr, participant: participantStr });
-                
                 totalWeight += Number(weightStr) || 0;
                 totalParticipants += Number(participantStr) || 0;
             }
@@ -1577,21 +1162,18 @@ async function fetchSheetData() {
         tableData.sort((a, b) => parseInt(b.year) - parseInt(a.year));
         const formatNum = (num) => num ? Number(num).toLocaleString() : '—';
 
-        // 更新上方卡片
-        const elWeight = document.getElementById('milestone-weight');
-        const elParticipants = document.getElementById('milestone-participants');
-        const elYears = document.getElementById('milestone-years');
-        
-if (elWeight) elWeight.innerText = formatNum(totalWeight);
-if (elParticipants) elParticipants.innerText = formatNum(totalParticipants);
-if (elYears) elYears.innerText = '20'; // 固定顯示 20
+        if (totalWeight) cachedTotalWeight = totalWeight;
+        if (totalParticipants) cachedTotalParticipants = totalParticipants;
 
-        // 產生明細表格 HTML (帶有手機內邊距與不換行優化)
+        const dataView = document.getElementById('data-view');
+        if (dataView && !dataView.classList.contains('hidden')) {
+            triggerDataMilestoneAnimations();
+        }
+
         const tbody = document.getElementById('data-table-body');
         if (tbody) {
             tbody.innerHTML = tableData.map((data, index) => {
                 const bgClass = index % 2 === 1 ? 'bg-pomelo-cream/30' : 'bg-white';
-                
                 return `
                     <tr class="${bgClass} hover:bg-pomelo-pulp/15 transition-colors divide-x divide-pomelo-peel/15 text-xs sm:text-base">
                         <td class="py-3 px-2 sm:py-4 sm:px-6 font-bold text-pomelo-leaf whitespace-nowrap">${data.year}</td>
@@ -1603,114 +1185,42 @@ if (elYears) elYears.innerText = '20'; // 固定顯示 20
         }
     } catch (error) {
         console.error("讀取資料失敗：", error);
-        const tbody = document.getElementById('data-table-body');
-        if (tbody) {
-            tbody.innerHTML = `<tr><td colspan="3" class="py-8 text-red-500 bg-white">資料讀取失敗，請確認試算表權限已設定為「知道連結的任何人都可以查看」。</td></tr>`;
-        }
     }
 }
 
-        document.addEventListener('DOMContentLoaded', () => {
-// 加入這行，網頁載入時就去抓試算表資料
-            fetchSheetData();
+// ===== 7. 頁面初始化唯一觸發點 =====
 document.addEventListener('DOMContentLoaded', () => {
-    // 網頁載入時同時抓取試算表與初始化影片
-    fetchSheetData();
-    renderVideos(); // 👈 新增這一行
+    fetchSheetData();   // 抓取試算表資料
+    renderVideos();     // 渲染影片
+    initStatCounters(); // 啟動首頁數字滾動動畫
 
-    // 行動裝置選單開關... (維持原本的不變)
-});
-
-            // 行動裝置選單開關
-            const btn = document.getElementById('mobile-menu-btn');
-            const menu = document.getElementById('mobile-menu');
-
-            if (btn && menu) {
-                btn.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                });
-            }
-
-            // 彈窗點擊背景關閉
-            const modal = document.getElementById('photo-modal');
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        closePhotoModal();
-                    }
-                });
-            }
-
-            // ESC 鍵關閉 Modal
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    closePhotoModal();
-                }
-            });
+    // 行動裝置選單開關
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
-// --- 燈箱 (Lightbox) 控制邏輯 ---
-        let currentLightboxIndex = 0;
-        let currentLightboxYear = null;
+    }
 
-        function openLightbox(index, year) {
-            currentLightboxIndex = index;
-            currentLightboxYear = year;
-            updateLightboxImage();
-            
-            const lb = document.getElementById('lightbox');
-            if (lb) {
-                lb.classList.remove('hidden');
-                // 延遲加上 opacity-100 產生漸顯動畫
-                setTimeout(() => lb.classList.replace('opacity-0', 'opacity-100'), 10);
-            }
-        }
+    // Modal 背景點擊與 ESC 鍵關閉
+    const modal = document.getElementById('photo-modal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closePhotoModal();
+        });
+    }
 
-        function updateLightboxImage() {
-            const list = photosData[currentLightboxYear];
-            if (!list || list.length === 0) return;
-            
-            const item = list[currentLightboxIndex];
-            const imgUrl = formatImageUrl(item.url);
-            const title = item.title || `${currentLightboxYear} 採柚紀錄照片 ${currentLightboxIndex + 1}`;
-            
-            const imgEl = document.getElementById('lightbox-img');
-            const titleEl = document.getElementById('lightbox-title');
-            
-            if (imgEl) {
-                // 加上一點透明度動畫讓切換更柔和
-                imgEl.style.opacity = '0.5';
-                imgEl.src = imgUrl;
-                imgEl.onload = () => { imgEl.style.opacity = '1'; };
-            }
-            if (titleEl) titleEl.innerText = title;
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closePhotoModal();
+            closeVideoModal();
+            closeLightbox();
         }
+    });
+});
+</script>
 
-        function prevPhoto(e) {
-            if (e) e.stopPropagation(); // 防止點擊事件往外傳遞
-            const list = photosData[currentLightboxYear];
-            if (!list) return;
-            // 循環回到最後一張
-            currentLightboxIndex = (currentLightboxIndex - 1 + list.length) % list.length;
-            updateLightboxImage();
-        }
-
-        function nextPhoto(e) {
-            if (e) e.stopPropagation(); // 防止點擊事件往外傳遞
-            const list = photosData[currentLightboxYear];
-            if (!list) return;
-            // 循環回到第一張
-            currentLightboxIndex = (currentLightboxIndex + 1) % list.length;
-            updateLightboxImage();
-        }
-
-        function closeLightbox() {
-            const lb = document.getElementById('lightbox');
-            if (lb) {
-                lb.classList.replace('opacity-100', 'opacity-0');
-                setTimeout(() => lb.classList.add('hidden'), 300);
-            }
-        }
-    </script>
 <!-- 影像燈箱 (支援左右滑動) -->
     <div id="lightbox" class="fixed inset-0 z-[60] hidden bg-black/90 flex items-center justify-center opacity-0 transition-opacity duration-300">
         <!-- 關閉按鈕 -->
@@ -1727,7 +1237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 
-    <!-- 頁尾區塊 Footer -->
+<!-- 頁尾區塊 Footer -->
 <footer class="bg-pomelo-dark text-white/80 py-6 mt-16 border-t border-pomelo-peel/20">
     <div class="max-w-7xl mx-auto px-4 text-center">
         <p class="text-xs md:text-sm text-white/70 tracking-wider">
@@ -1735,6 +1245,5 @@ document.addEventListener('DOMContentLoaded', () => {
         </p>
     </div>
 </footer>
-    
 </body>
 </html>
